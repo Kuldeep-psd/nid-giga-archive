@@ -3,8 +3,7 @@
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
 }
-.collection-heading { align-items: center; flex-wrap: nowrap; margin-bottom: 28px; }
-.collection-heading h1 { min-width: 0; }
+.collection-tools { display: flex; align-items: center; gap: 16px; margin-top: 12px; }
 .collection-view { display: flex; flex-shrink: 0; gap: 2px; padding: 3px; border-radius: 10px; background: var(--control-hover); }
 .collection-view button {
   display: inline-flex; align-items: center; justify-content: center;
@@ -34,7 +33,7 @@
 .search-erase { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 44px; height: 44px; border: 0; border-radius: 7px; background: transparent; color: var(--muted); touch-action: manipulation; }
 .search-erase:hover { color: var(--ink); background: var(--control-hover); }
 .search-erase svg { width: 16px; height: 16px; }
-.search-facets { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.search-facets { display: flex; flex: 1; flex-wrap: wrap; gap: 8px; min-width: 0; }
 .facet-control { position: relative; display: flex; width: 132px; min-width: 0; }
 .facet-control select {
   appearance: none; width: 100%; min-width: 0; height: 44px;
@@ -65,17 +64,19 @@
 .search-all-link:hover { text-decoration: underline; text-underline-offset: 4px; }
 .search-all-link svg { width: 16px; height: 16px; }
 @media (max-width: 700px) {
-  .collection-heading { gap: 10px; margin-bottom: 22px; }
-  .collection-heading h1 { font-size: clamp(28px, 6vw, 34px); }
   .archive-search { margin-bottom: 24px; }
   .search-field { padding-left: 14px; gap: 10px; min-height: 56px; }
   .search-field input { height: 44px; }
   .search-field kbd { display: none; }
-  .search-facets { display: grid; grid-template-columns: minmax(0, 1.06fr) minmax(0, .88fr) minmax(0, 1.06fr); gap: 6px; }
-  .facet-control, .facet-control.is-active { width: 100%; min-width: 0; max-width: none; }
   .facet-control select { padding-left: 8px; padding-right: 20px; font-size: 16px; }
   .facet-control > svg { right: 7px; width: 14px; }
   .search-empty { padding: 40px 18px; }
+}
+@media (max-width: 600px) {
+  .collection-tools { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 8px; }
+  .collection-tools .search-facets { display: contents; }
+  .collection-tools .facet-control, .collection-tools .facet-control.is-active { width: 100%; min-width: 0; max-width: none; }
+  .collection-view { justify-self: end; }
 }
 @media (prefers-reduced-motion: reduce) {
   .search-field, .facet-control select { transition: none; }

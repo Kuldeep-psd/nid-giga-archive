@@ -1,9 +1,8 @@
 /* Stable, quiet feedback for the archive's asynchronous states. */
 h1, h2 { text-wrap: balance; }
-.nav-count, .card-topline, #zoom-value { font-variant-numeric: tabular-nums; }
+.nav-count, .card-year, #zoom-value { font-variant-numeric: tabular-nums; }
 .archive-loading { padding: 24px 32px; width: 100%; }
 .loading-shape { display: block; background: var(--soft); border: 1px solid var(--line); border-radius: 10px; }
-.loading-title { width: min(220px, 65%); height: 50px; margin-bottom: 18px; }
 .loading-search { height: 60px; margin-bottom: 12px; }
 .loading-facets { display: flex; gap: 8px; margin-bottom: 45px; }
 .loading-facets > span { width: 132px; height: 44px; border-radius: 8px; }
@@ -29,7 +28,7 @@ h1, h2 { text-wrap: balance; }
 .project-card:focus-visible { outline-offset: -3px; }
 .facet-control select option:disabled { color: var(--muted); }
 @media (max-width: 960px) { .archive-loading { padding: 18px 24px; } .loading-nav { min-width: 90px; margin: 0; } }
-@media (max-width: 700px) { .archive-loading { padding: 12px 20px; } .loading-title { margin-bottom: 12px; } .loading-search { height: 56px; } .loading-facets { margin-bottom: 31px; gap: 6px; } .loading-facets > span { width: 33.333%; } }
+@media (max-width: 700px) { .archive-loading { padding: 12px 20px; } .loading-search { height: 56px; } .loading-facets { margin-bottom: 31px; gap: 6px; } .loading-facets > span { width: 33.333%; } }
 @media (max-width: 360px) { .archive-loading { padding-inline: 16px; } }
 @media (prefers-reduced-motion: reduce) {
   [data-preview] img, .project-card .card-title > svg { transition: none; }

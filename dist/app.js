@@ -3,7 +3,7 @@ import { filterOptions, filterProjects, facetValues } from './archive-search.js'
 const icons={chevron:'<path d="m7 10 5 5 5-5"/>',search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/>',grid:'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>',list:'<path d="M8 5h13M8 12h13M8 19h13M3 5h.01M3 12h.01M3 19h.01"/>',arrow:'<path d="M5 12h14m-6-6 6 6-6 6"/>',expand:'<path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/>',close:'<path d="m6 6 12 12M6 18 18 6"/>'};
 const icon=name=>`<svg viewBox="0 0 24 24" aria-hidden="true">${icons[name]||icons.arrow}</svg>`;
 const esc=text=>String(text).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let projects=[],view='grid',routeRevision=0,collectionURL=null,positionTimer,searchFrame,archiveReady=false;
+let projects=[],view='grid',routeRevision=0,collectionURL=null,positionTimer,searchFrame,archiveReady=false,stopCollectionLayout;
 try{if(localStorage.getItem('giga-archive-view')==='list')view='list'}catch{}
 const content=document.querySelector('#content');
 const params=()=>new URLSearchParams(location.search);
@@ -18,7 +18,7 @@ function saveCollectionPosition(link){
   const scroller=document.querySelector('.results-scroll');
   if(!scroller||collectionURL!==location.href)return;
   const card=link?.matches('.project-card')?link:document.activeElement?.closest('.project-card');
-  history.replaceState({...history.state,archiveCollection:{url:collectionURL,view,top:scroller.scrollTop,pageTop:window.scrollY,project:card?.getAttribute('href')||history.state?.archiveCollection?.project||null}},'');
+  history.replaceState({...history.state,archiveCollection:{url:collectionURL,view,pageTop:window.scrollY,project:card?.getAttribute('href')||history.state?.archiveCollection?.project||null}},'');
 }
 function queueCollectionPosition(){
   const revision=routeRevision;
@@ -26,7 +26,36 @@ function queueCollectionPosition(){
   positionTimer=setTimeout(()=>{if(revision===routeRevision)saveCollectionPosition()},150);
 }
 
-function renderCard(p){return `<a class="project-card" href="${projectURL(p)}"><div data-preview class="card-preview is-loading${p.height>p.width?' is-portrait':''}"><img src="${esc(p.overview)}" width="${p.width||2400}" height="${p.height||600}" alt="${esc(p.imageAlt||`Overview of ${p.title}`)}" loading="lazy" decoding="async"></div><div class="card-content"><div class="card-topline"><span>${p.batch}</span></div><div class="card-title"><h2>${esc(p.title)}</h2>${icon('arrow')}</div><p class="card-description">${esc(p.summary)}</p><div class="card-bottom"><div class="tags">${p.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div></div></div></a>`}
+// Let the browser own scrolling; measure only the space occupied by sticky controls.
+function watchCollectionLayout(){
+  const header=document.querySelector('.site-header'),sidebar=document.querySelector('.sidebar'),controls=document.querySelector('.collection-controls');
+  const update=()=>{
+    const headerHeight=header.offsetHeight;
+    const navigationHeight=matchMedia('(max-width: 960px)').matches?sidebar.offsetHeight:0;
+    const stack=headerHeight+navigationHeight+controls.offsetHeight;
+    const availableHeight=Math.min(innerHeight,window.visualViewport?.height||innerHeight);
+    document.body.style.setProperty('--archive-header-height',`${headerHeight}px`);
+    document.body.style.setProperty('--archive-nav-height',`${navigationHeight}px`);
+    document.documentElement.style.setProperty('--archive-sticky-offset',`${stack}px`);
+    document.body.classList.toggle('collection-relaxed',availableHeight-stack<240);
+  };
+  const observer=new ResizeObserver(update);
+  [header,sidebar,controls].forEach(node=>observer.observe(node));
+  window.addEventListener('resize',update);
+  window.visualViewport?.addEventListener('resize',update);
+  update();
+  stopCollectionLayout=()=>{
+    observer.disconnect();
+    window.removeEventListener('resize',update);
+    window.visualViewport?.removeEventListener('resize',update);
+    document.body.classList.remove('collection-relaxed');
+    document.body.style.removeProperty('--archive-header-height');
+    document.body.style.removeProperty('--archive-nav-height');
+    document.documentElement.style.removeProperty('--archive-sticky-offset');
+  };
+}
+
+function renderCard(p){return `<a class="project-card" href="${projectURL(p)}"><div data-preview class="card-preview is-loading${p.height>p.width?' is-portrait':''}"><img src="${esc(p.overview)}" width="${p.width||2400}" height="${p.height||600}" alt="${esc(p.imageAlt||`Overview of ${p.title}`)}" loading="lazy" decoding="async"></div><div class="card-content"><div class="card-title"><h2>${esc(p.title)}</h2>${icon('arrow')}</div><p class="card-description">${esc(p.summary)}</p><p class="card-year"><span class="sr-only">Batch </span>${p.batch}</p><div class="card-bottom"><div class="tags">${p.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join('')}</div></div></div></a>`}
 
 const cardMarkup=new Map();
 function cachedCard(project){if(!cardMarkup.has(project.id))cardMarkup.set(project.id,renderCard(project));return cardMarkup.get(project.id)}
@@ -101,7 +130,7 @@ function results(updateURL=false){
   document.querySelector('#search-shortcut').hidden=Boolean(raw);
   updateFilterChips(selected);
   updateFacetAvailability(selected,raw,batch);
-  document.querySelector('.results-scroll').scrollTop=0;
+  if(updateURL)window.scrollTo(0,0);
   collectionURL=location.href;
   document.querySelector('#reset-results')?.addEventListener('click',()=>{
     document.querySelector('#search').value='';
@@ -114,11 +143,11 @@ function clearFilters(){facets.forEach(facet=>document.querySelector('#filter-'+
 function renderCollection(){
   const batch=currentBatch();
   document.title=`${batch==='all'?'All gigamaps':`Batch ${batch}`} — NID Giga Archive`;
-  content.innerHTML=`<div class="collection-controls"><div class="page-heading collection-heading"><h1>${batch==='all'?'All gigamaps':`Batch ${esc(batch)}`}<span class="heading-dot">.</span></h1><div class="collection-view" role="group" aria-label="Display as"><button type="button" data-view="grid" aria-label="Tile view" title="Tile view" aria-pressed="${view==='grid'}">${icon('grid')}</button><button type="button" data-view="list" aria-label="List view" title="List view" aria-pressed="${view==='list'}">${icon('list')}</button></div></div>
+  content.innerHTML=`<h1 class="sr-only">${batch==='all'?'All gigamaps':`Batch ${esc(batch)}`}</h1><div class="collection-controls">
   <form class="archive-search" role="search" aria-label="Search the archive">
     <div class="search-field">${icon('search')}<input type="search" id="search" name="q" aria-keyshortcuts="/ Meta+K Control+K" value="${esc(params().get('q')||'')}" placeholder="${batch==='all'?'Search maps, topics, people…':'Search this batch…'}" aria-label="Search gigamaps" aria-describedby="search-scope" aria-controls="results" autocomplete="off" spellcheck="false" enterkeyhint="search"><kbd id="search-shortcut" aria-hidden="true">/</kbd><button class="search-erase" id="search-clear" type="button" aria-label="Clear search" title="Clear search (Esc)" hidden>${icon('close')}</button></div>
     <span id="search-scope" class="sr-only">${batch==='all'?'Search across all batches.':`Search within batch ${esc(batch)}.`} Search titles, topics, contributor names, and recognized map text where available. Minor typos are supported. Press Enter or Down Arrow to move to results.</span>
-    ${filterControls()}
+    <div class="collection-tools">${filterControls()}<div class="collection-view" role="group" aria-label="Display as"><button type="button" data-view="grid" aria-label="Tile view" title="Tile view" aria-pressed="${view==='grid'}">${icon('grid')}</button><button type="button" data-view="list" aria-label="List view" title="List view" aria-pressed="${view==='list'}">${icon('list')}</button></div></div>
     <div class="active-filters" id="active-filters" hidden><div id="active-filter-list" aria-label="Selected filters"></div><button type="button" class="clear-facet-filters" id="clear-filters">Clear filters</button></div>
     <p class="sr-only" id="search-status" role="status" aria-live="polite" aria-atomic="true"></p>
   </form></div>
@@ -140,16 +169,17 @@ function renderCollection(){
     view=button.dataset.view;
     try{localStorage.setItem('giga-archive-view',view)}catch{}
     document.querySelector('#results').className=`project-list ${view}`;
-    document.querySelector('.results-scroll').scrollTop=0;
+    window.scrollTo(0,0);
     content.querySelectorAll('[data-view]').forEach(choice=>choice.setAttribute('aria-pressed',choice.dataset.view===view));
     saveCollectionPosition();
   }));
   results();
-  document.querySelector('.results-scroll').addEventListener('scroll',queueCollectionPosition,{passive:true});
+  watchCollectionLayout();
   document.querySelector('.results-scroll').addEventListener('focusin',()=>saveCollectionPosition());
 }
 async function route(focus=false,restore=false){
   cancelAnimationFrame(searchFrame);
+  stopCollectionLayout?.();stopCollectionLayout=null;
   const revision=++routeRevision;
   content.setAttribute('aria-busy','true');
   const saved=restore?history.state?.archiveCollection:null;
@@ -169,8 +199,8 @@ async function route(focus=false,restore=false){
   if(revision!==routeRevision)return;
   content.setAttribute('aria-busy','false');
   const scroller=document.querySelector('.results-scroll');
-  if(scroller&&saved?.url===location.href&&saved.view===view&&Number.isFinite(saved.top)&&saved.top>=0&&Number.isFinite(saved.pageTop)&&saved.pageTop>=0){
-    const restorePosition=()=>{if(revision!==routeRevision)return;scroller.scrollTop=saved.top;window.scrollTo(0,saved.pageTop)};
+  if(scroller&&saved?.url===location.href&&saved.view===view&&Number.isFinite(saved.pageTop)&&saved.pageTop>=0){
+    const restorePosition=()=>{if(revision!==routeRevision)return;window.scrollTo(0,saved.pageTop)};
     restorePosition();requestAnimationFrame(restorePosition);
     if(focus){
       const card=[...scroller.querySelectorAll('.project-card')].find(link=>link.getAttribute('href')===saved.project);
