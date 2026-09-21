@@ -26,31 +26,42 @@ function queueCollectionPosition(){
   positionTimer=setTimeout(()=>{if(revision===routeRevision)saveCollectionPosition()},150);
 }
 
-// Let the browser own scrolling; measure only the space occupied by sticky controls.
+// Measure the pinned frame without changing its positioning as the viewport scrolls.
 function watchCollectionLayout(){
   const header=document.querySelector('.site-header'),sidebar=document.querySelector('.sidebar'),controls=document.querySelector('.collection-controls');
+  const compactNavigation=matchMedia('(max-width: 960px)');
+  const setSize=(element,property,height)=>{
+    const value=`${height}px`;
+    if(element.style.getPropertyValue(property)!==value)element.style.setProperty(property,value);
+  };
   const update=()=>{
     const headerHeight=header.offsetHeight;
-    const navigationHeight=matchMedia('(max-width: 960px)').matches?sidebar.offsetHeight:0;
+    const navigationHeight=compactNavigation.matches?sidebar.offsetHeight:0;
     const stack=headerHeight+navigationHeight+controls.offsetHeight;
-    const availableHeight=Math.min(innerHeight,window.visualViewport?.height||innerHeight);
-    document.body.style.setProperty('--archive-header-height',`${headerHeight}px`);
-    document.body.style.setProperty('--archive-nav-height',`${navigationHeight}px`);
-    document.documentElement.style.setProperty('--archive-sticky-offset',`${stack}px`);
-    document.body.classList.toggle('collection-relaxed',availableHeight-stack<240);
+    setSize(document.body,'--archive-header-height',headerHeight);
+    setSize(document.body,'--archive-nav-height',navigationHeight);
+    setSize(document.documentElement,'--archive-sticky-offset',stack);
   };
   const observer=new ResizeObserver(update);
-  [header,sidebar,controls].forEach(node=>observer.observe(node));
-  window.addEventListener('resize',update);
-  window.visualViewport?.addEventListener('resize',update);
-  update();
+  [header,controls].forEach(node=>observer.observe(node));
+  // Browser chrome cannot change the stable CSS cap; a keyboard may reduce it.
+  const updateVisibleHeight=()=>setSize(document.body,'--archive-visible-height',window.visualViewport?.height||innerHeight);
+  window.visualViewport?.addEventListener('resize',updateVisibleHeight);
+  updateVisibleHeight();
+  const observeNavigation=()=>{
+    if(compactNavigation.matches)observer.observe(sidebar);
+    else observer.unobserve(sidebar);
+    update();
+  };
+  compactNavigation.addEventListener('change',observeNavigation);
+  observeNavigation();
   stopCollectionLayout=()=>{
     observer.disconnect();
-    window.removeEventListener('resize',update);
-    window.visualViewport?.removeEventListener('resize',update);
-    document.body.classList.remove('collection-relaxed');
+    compactNavigation.removeEventListener('change',observeNavigation);
+    window.visualViewport?.removeEventListener('resize',updateVisibleHeight);
     document.body.style.removeProperty('--archive-header-height');
     document.body.style.removeProperty('--archive-nav-height');
+    document.body.style.removeProperty('--archive-visible-height');
     document.documentElement.style.removeProperty('--archive-sticky-offset');
   };
 }

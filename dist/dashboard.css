@@ -1,24 +1,28 @@
 /* One native page scroller, with navigation and search held in place. */
 .collection-page {
-  min-height: 100dvh;
+  min-height: 100svh;
   --collection-gutter: 32px;
   --archive-header-height: 92px;
   --archive-nav-height: 0px;
 }
 html:has(.collection-page) { scroll-padding-top: calc(var(--archive-sticky-offset, 270px) + 16px); }
+html:has(.collection-page), body.collection-page { overscroll-behavior-y: none; }
 .collection-page .site-header { position: sticky; top: 0; z-index: 30; flex-shrink: 0; }
 .collection-page .workspace { min-height: 0; overflow: visible; }
 .collection-page .sidebar {
   position: sticky; top: var(--archive-header-height); align-self: start; z-index: 20;
-  height: calc(100dvh - var(--archive-header-height)); min-height: 0;
+  height: calc(100svh - var(--archive-header-height)); min-height: 0;
   overflow-y: auto; overscroll-behavior-y: auto; background: var(--paper);
 }
 .collection-page .sidebar > * { flex-shrink: 0; }
 .collection-page main { min-height: 0; max-width: none; padding: 0; overflow: visible; }
-.collection-page #content { height: 100%; min-height: 0; }
+.collection-page #content { min-height: 0; }
 .collection-controls {
   position: sticky; top: calc(var(--archive-header-height) + var(--archive-nav-height)); z-index: 10;
   padding: 24px var(--collection-gutter) 20px; border-bottom: 1px solid var(--line); background: var(--paper);
+  /* Keep the frame pinned even in landscape; overflowing filters remain reachable. */
+  max-height: max(76px, calc(min(100svh, var(--archive-visible-height, 100svh)) - var(--archive-header-height) - var(--archive-nav-height) - 100px));
+  overflow-y: auto;
 }
 .collection-controls .archive-search { margin: 0; }
 .collection-controls .active-filters {
@@ -110,12 +114,12 @@ html:has(.collection-page) { scroll-padding-top: calc(var(--archive-sticky-offse
 @media (max-width: 360px) {
   .collection-page { --collection-gutter: 16px; }
 }
-/* Release the sticky stack when landscape, zoom or a keyboard leaves too little map space. */
-.collection-page.collection-relaxed :is(.site-header,.sidebar,.collection-controls) { position: static; }
-.collection-page.collection-relaxed .sidebar { height: auto; }
-html:has(.collection-page.collection-relaxed) { scroll-padding-top: 16px; }
-@media (max-height: 640px) {
-  .collection-page :is(.site-header,.sidebar,.collection-controls) { position: static; }
-  .collection-page .sidebar { height: auto; }
-  html:has(.collection-page) { scroll-padding-top: 16px; }
+/* A single header row leaves room for maps on a landscape phone. */
+@media (min-width: 560px) and (max-width: 960px) and (orientation: landscape) {
+  .collection-page .site-header { display: flex; gap: 16px; min-height: 64px; padding-top: 8px; padding-bottom: 8px; }
+  .collection-page .brand { font-size: 19px; }
+  .collection-page .institution-logo { width: clamp(140px, 23vw, 200px); }
+  .collection-page .header-nav { display: flex; margin-left: auto; gap: 12px; }
+  .collection-page .sidebar { padding-top: 6px; padding-bottom: 6px; }
+  .collection-page .collection-controls { padding-top: 10px; padding-bottom: 10px; }
 }
