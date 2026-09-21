@@ -5,7 +5,7 @@ import { dirname, resolve, extname, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readDownloadManifest, resolveDownloadPath, validateManifest } from './scripts/download-manifest.mjs';
 
-const defaultRoot = resolve(dirname(fileURLToPath(import.meta.url)), 'dist');
+const defaultRoot = resolve(dirname(fileURLToPath(import.meta.url)), 'build');
 const types = {
   '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
   '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8',
@@ -70,9 +70,11 @@ async function releaseDownload(root, pathname) {
   return asset;
 }
 
-export function createArchiveServer({ rootDir = defaultRoot } = {}) {
+// Shared by the production-build preview and Vite's asset middleware. Keeping
+// downloads here preserves streaming, ranges, validators and release fallbacks.
+export function createArchiveHandler({ rootDir = defaultRoot, spaFallback = false } = {}) {
   const root = resolve(rootDir);
-  return createServer(async (req, res) => {
+  return async (req, res) => {
     if (req.method !== 'GET' && req.method !== 'HEAD') {
       respond(req, res, 405, 'Method not allowed', { Allow: 'GET, HEAD' });
       return;
@@ -86,7 +88,8 @@ export function createArchiveServer({ rootDir = defaultRoot } = {}) {
         respond(req, res, 400, 'Bad request');
         return;
       }
-      const file = resolve(root, `.${pathname === '/' ? '/index.html' : pathname}`);
+      const appRoute = spaFallback && (pathname === '/about' || /^\/maps\/[^/]+\/?$/.test(pathname));
+      const file = resolve(root, `.${pathname === '/' || appRoute ? '/index.html' : pathname}`);
       if (!file.startsWith(root + sep)) {
         respond(req, res, 403, 'Forbidden');
         return;
@@ -154,11 +157,15 @@ export function createArchiveServer({ rootDir = defaultRoot } = {}) {
     } finally {
       if (handle) await handle.close().catch(() => {});
     }
-  });
+  };
+}
+
+export function createArchiveServer(options = {}) {
+  return createServer(createArchiveHandler(options));
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const port = Number(process.env.PORT) || 4173;
-  createArchiveServer().listen(port, '127.0.0.1', () =>
-    console.log(`Giga Archive running at http://127.0.0.1:${port}`));
+  createArchiveServer({ spaFallback: true }).listen(port, '127.0.0.1', () =>
+    console.log(`Giga Archive production preview at http://127.0.0.1:${port}`));
 }

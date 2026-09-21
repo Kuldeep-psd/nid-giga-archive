@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fafbfc">
+  <title>NID Giga Archive — Batchwise gigamaps</title>
+  <meta name="description" content="An evolving archive of gigamaps. Browse by batch, search projects, explore the details, and download the original maps.">
+  <link rel="icon" type="image/svg+xml" href="/assets/brand/nid-mark.svg">
+  <link rel="preload" href="/assets/fonts/dm-sans-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    (() => {
+      let theme;
+      try { theme = localStorage.getItem('giga-archive-theme'); } catch {}
+      if (!['light', 'dark'].includes(theme)) theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = theme;
+      document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#101010' : '#fafbfc';
+    })();
+  </script>
+  <style>
+    html{background:#fafbfc;color:#171717}html[data-theme=dark]{background:#101010;color:#eee}
+    .boot-status{font:16px/1.6 system-ui,sans-serif;padding:48px;max-width:650px;margin:auto}
+    .boot-status button{font:inherit;padding:10px 16px;cursor:pointer}
+  </style>
+</head>
+<body>
+  <div id="root"><div class="boot-status" role="status">Opening the archive…</div></div>
+  <noscript>This archive needs JavaScript for search and the map viewer. <a href="/downloads/garden-of-digital-delights.pdf">Download The Garden of Digital Delights PDF</a>.</noscript>
+  <script>
+    (() => {
+      let ready = false;
+      const fail = () => {
+        if (ready) return;
+        const root = document.getElementById('root');
+        const message = document.createElement('div');
+        message.className = 'boot-status'; message.setAttribute('role', 'alert');
+        const heading = document.createElement('h1'); heading.textContent = 'The archive couldn’t start.';
+        const text = document.createElement('p'); text.textContent = 'Reload this page to try again.';
+        const button = document.createElement('button'); button.type = 'button'; button.textContent = 'Try again'; button.onclick = () => location.reload();
+        message.append(heading, text, button); root.replaceChildren(message);
+      };
+      const timer = setTimeout(fail, 20000);
+      window.addEventListener('archive:boot', () => { ready = true; clearTimeout(timer); }, { once: true });
+      window.addEventListener('error', event => { if (event.target?.tagName === 'SCRIPT' && event.target.type === 'module') { clearTimeout(timer); fail(); } }, true);
+    })();
+  </script>
+  <script id="archive-app" type="module" src="/src/main.jsx"></script>
+</body>
+</html>

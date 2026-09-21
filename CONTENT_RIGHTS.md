@@ -14,7 +14,7 @@ The National Institute of Design name and mark identify the institution associat
 
 ## Third-party components
 
-OpenSeadragon and MiniSearch retain their accompanying licenses in `dist/assets/vendor/`. DM Sans and IBM Plex Mono retain their font license notices in `dist/assets/fonts/`. Follow the relevant license when redistributing those components.
+OpenSeadragon and MiniSearch retain their accompanying licenses in `dist/assets/vendor/`. React, React DOM, Scheduler, React Router, Remix Route Pattern and cookie-es retain their runtime notices in `dist/assets/vendor/react-runtime-LICENSES.txt`, which is also included in deployed assets. DM Sans and IBM Plex Mono retain their font license notices in `dist/assets/fonts/`. Follow the relevant license when redistributing those components.
 
 ## Corrections and removal requests
 

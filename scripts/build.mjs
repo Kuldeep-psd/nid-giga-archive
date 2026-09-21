@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { validateArchive } from './validate-archive.mjs';
 import { readDownloadManifest } from './download-manifest.mjs';
 import { siteConfig, validateSiteConfig } from '../dist/site-config.js';
+import { build as buildVite } from 'vite';
 
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -11,6 +12,7 @@ export async function buildArchive({
   sourceDir = resolve(repositoryRoot, 'dist'),
   outputDir = resolve(repositoryRoot, 'build'),
   vercelConfigPath = resolve(repositoryRoot, 'vercel.json'),
+  bundle = true,
 } = {}) {
   const source = resolve(sourceDir);
   const output = resolve(outputDir);
@@ -37,8 +39,21 @@ export async function buildArchive({
   const downloadsDir = resolve(source, 'downloads');
   await cp(source, output, {
     recursive: true,
-    filter: path => path !== downloadsDir && !path.startsWith(downloadsDir + sep),
+    filter: path => {
+      if (path === downloadsDir || path.startsWith(downloadsDir + sep)) return false;
+      // Application source is compiled by Vite. Only the archive's original
+      // assets, metadata and shared styles are copied as stable public URLs.
+      if (dirname(path) === source && (/\.(?:js|html)$/.test(path))) return false;
+      return true;
+    },
   });
+  if (bundle) {
+    await buildVite({
+      root: repositoryRoot,
+      configFile: resolve(repositoryRoot, 'vite.config.js'),
+      build: { outDir: output, emptyOutDir: false },
+    });
+  }
   return { count: projects.length, outputDir: output };
 }
 

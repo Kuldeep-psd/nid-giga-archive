@@ -26,6 +26,9 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: '22'
+          cache: npm
+      - name: Install pinned dependencies
+        run: npm ci
       - name: Validate source and catalog
         run: npm run check
       - name: Run regression tests

@@ -23,7 +23,7 @@ before(async () => {
     writeFile(join(temporary, 'private.txt'), 'not public'),
   ]);
   await symlink(join(temporary, 'private.txt'), join(root, 'outside.txt'));
-  server = createArchiveServer({ rootDir: root });
+  server = createArchiveServer({ rootDir: root, spaFallback: true });
   await new Promise((resolve, reject) => {
     server.once('error', reject);
     server.listen(0, '127.0.0.1', resolve);
@@ -52,6 +52,18 @@ test('GET and HEAD describe the same file, with correct font MIME and bounded ca
   assert.equal(font.headers.get('content-type'), 'font/woff2');
   assert.equal(font.headers.get('cache-control'), 'public, max-age=3600, must-revalidate');
   await font.arrayBuffer();
+});
+
+test('React routes reload through the app entry without swallowing missing asset requests', async () => {
+  for (const path of ['/about', '/maps/sample-map', '/maps/sample-map/?section=context']) {
+    const response = await fetch(`${base}${path}`);
+    assert.equal(response.status, 200, path);
+    assert.match(response.headers.get('content-type'), /text\/html/);
+    assert.equal(await response.text(), '<title>Archive</title>');
+  }
+  const missing = await fetch(`${base}/assets/missing.js`);
+  assert.equal(missing.status, 404);
+  assert.equal(await missing.text(), 'Not found');
 });
 
 test('unchanged files revalidate with ETag or Last-Modified and return no response body', async () => {

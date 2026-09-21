@@ -1,0 +1,3 @@
+#root { display: flex; flex-direction: column; flex: 1; min-height: 100svh; }
+.navigation-status { position: fixed; z-index: 40; right: 20px; bottom: 20px; margin: 0; padding: 10px 14px; color: var(--muted); background: var(--white); border: 1px solid var(--line); border-radius: 8px; font-size: 13px; }
+.empty-state .retry-button + .text-button { margin-left: 20px; }

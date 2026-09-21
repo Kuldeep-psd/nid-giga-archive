@@ -1,7 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { projectPageHTML, formatFileSize } from '../dist/project-template.js';
+import { createElement } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { MemoryRouter } from 'react-router';
+import ProjectPage from '../src/components/ProjectPage.jsx';
+import { formatFileSize } from '../src/lib/format.js';
+
+const projectPageHTML = project => renderToStaticMarkup(createElement(MemoryRouter, null, createElement(ProjectPage, { project })));
 
 const { projects } = JSON.parse(await readFile(new URL('../dist/data/archive.json', import.meta.url), 'utf8'));
 const base = () => structuredClone(projects[0]);

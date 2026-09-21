@@ -14,13 +14,16 @@ Public issues and pull requests are visible to everyone. For a rights or privacy
 
 ## Development
 
-Use Node.js 22 LTS. No dependency installation is required.
+Use Node.js 22 LTS, version 22.22.2 or later.
 
 ```sh
-npm start
+npm ci
+npm run dev
 ```
 
-The archive runs at [localhost:4173](http://127.0.0.1:4173/). Edit the files in `dist/` and refresh the browser. The original PDFs can be fetched for offline work with `npm run assets:fetch`; they remain outside Git.
+The archive runs at [localhost:4173](http://127.0.0.1:4173/). Edit the React components and hooks in `src/`; Vite updates the browser as you work. The root `index.html` is the application entry. Catalog data, shared CSS, search utilities, site configuration and public assets remain in `dist/`. The original PDFs can be fetched for offline work with `npm run assets:fetch`; they remain outside Git.
+
+Use React state and effects for interface behaviour and React Router links for internal navigation. Collection filters use query parameters; map routes are `/maps/:id`, and About is `/about`. Keep legacy query and hash URLs working when changing routes. Do not add manual `innerHTML` page rendering or document-level click routing alongside React. The map viewer is a shared component that manages OpenSeadragon through its lifecycle.
 
 Before submitting changes, run:
 
@@ -30,11 +33,11 @@ npm test
 npm run build
 ```
 
-Check visible changes at desktop and phone widths, in light and dark modes, with keyboard navigation. For viewer changes, include a portrait map, section navigation, loading/retry behaviour and a PDF download. Use temporary fixtures for scale or missing-data checks; do not add synthetic projects to the real catalog.
+Check visible changes at desktop and phone widths, in light and dark modes, with keyboard navigation. For viewer changes, include a portrait map, section navigation, loading/retry behaviour and a PDF download. Verify direct route refreshes, Back navigation and scroll restoration when changing navigation. Use temporary fixtures for scale or missing-data checks; do not add synthetic projects to the real catalog. The scenario server uses the generated `build/`, so run the build before starting a scenario.
 
 ## Keep every map consistent
 
-All current and future maps use `dist/project-template.js` and `dist/project.js`. Add metadata and assets, not a separate HTML page, route implementation or CSS theme.
+All current and future maps use `src/components/ProjectPage.jsx` and `src/components/MapViewer.jsx`, with the OpenSeadragon adapter in `src/lib/viewer.js`. Add metadata and assets, not a separate HTML page, route implementation or CSS theme.
 
 The shared details format is:
 
@@ -45,6 +48,8 @@ The shared details format is:
 Verified duration and institution can remain in metadata but must not add facts rows. Optional process text joins the overview. Credit rows keep the same spacing and separators. Unknown source facts stay omitted; the template displays “Not recorded” for missing credits or team size. Check the printed artwork before treating credits as unknown.
 
 Use shared CSS and theme tokens. Preserve the artwork’s proportions and colours. Do not add generic “Systems design”, “Systems thinking” or “Systems mapping” descriptors, project-specific decorations, site footers, visible result counters or “The complete map” labels. The landing page remains All gigamaps, and contributor contact stays in About.
+
+Collections scroll with the native document. Keep search and navigation pinned, the collection heading visually hidden, and the tile/list toggle beside the filters. Do not forward wheel events to a nested results panel or switch the frame between pinned and static positioning while scrolling or resizing. Short viewports may scroll inside the search panel while the frame stays stable.
 
 ## Add a catalog entry
 
@@ -102,4 +107,4 @@ The included OCR helper uses Apple Vision locally on macOS. Compile and run it b
 
 ## Review expectations
 
-Keep pull requests focused, explain the problem and resulting behaviour, and retain third-party license notices. Changes to the shared template or viewer must work for every map, including future entries with optional metadata. CI must pass before merging. Be considerate when discussing student work and credit corrections.
+Keep pull requests focused, explain the problem and resulting behaviour, and retain third-party license notices. When updating runtime dependencies, update `dist/assets/vendor/react-runtime-LICENSES.txt` from the installed package licenses. Changes to the shared template or viewer must work for every map, including future entries with optional metadata. CI must pass before merging. Be considerate when discussing student work and credit corrections.

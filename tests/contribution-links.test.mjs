@@ -1,7 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { contributionHTML } from '../dist/about-template.js';
+import React from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { MemoryRouter } from 'react-router';
+import AboutPage, { ContributionSection } from '../src/components/AboutPage.jsx';
 import { siteConfig, validateSiteConfig } from '../dist/site-config.js';
+
+const render = component => renderToStaticMarkup(React.createElement(MemoryRouter, null, component));
+const contributionHTML = config => render(React.createElement(ContributionSection, { config }));
 
 test('the not-yet-created Google Form is honest, non-interactive text', () => {
   const html = contributionHTML({ ...siteConfig, submissionFormUrl: null });
@@ -27,4 +33,15 @@ test('configuration rejects unsafe or misleading submission and repository links
     assert.throws(() => contributionHTML({ ...siteConfig, submissionFormUrl }));
   }
   assert.ok(validateSiteConfig({ ...siteConfig, repositoryUrl: 'https://github.com.evil.test/a/b' }).length);
+});
+
+test('the React About page retains the approved archive context and contributor details', () => {
+  const html = render(React.createElement(AboutPage));
+  assert.match(html, /Information Design and Universal Design departments at the National Institute of Design/);
+  assert.match(html, /Information Design · Batch of 2026/);
+  assert.match(html, /href="mailto:ks00347@gmail.com"/);
+  assert.match(html, /href="https:\/\/www.linkedin.com\/in\/kuldeep-singh-9818721068\/"/);
+  assert.match(html, /href="\/"[^>]*>.*Back to the collection/);
+  assert.equal((html.match(/class="contributor-section"/g) || []).length, 1);
+  assert.doesNotMatch(html, /<footer|href="tel:|Batch of 2024|GIGA ARCHIVE/);
 });

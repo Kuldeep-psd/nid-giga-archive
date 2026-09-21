@@ -7,7 +7,7 @@
 //   SCENARIO=viewer-error node scripts/preview-scenarios.mjs
 //   SCENARIO=project-error node scripts/preview-scenarios.mjs
 //   SCENARIO=future node scripts/preview-scenarios.mjs
-// Open http://127.0.0.1:4174/ (PORT can override 4174).
+// Run npm run build first. Open http://127.0.0.1:4174/ (PORT can override 4174).
 // Synthetic metadata exists only in memory. No real archive files are changed.
 
 import { createServer } from 'node:http';
@@ -27,6 +27,16 @@ if (!Number.isInteger(port) || port < 1 || port > 65535) {
 }
 
 const archive = JSON.parse(await readFile(new URL('../dist/data/archive.json', import.meta.url), 'utf8'));
+let bundleManifest;
+try {
+  bundleManifest = JSON.parse(await readFile(new URL('../build/.vite/manifest.json', import.meta.url), 'utf8'));
+} catch {
+  console.error('Build the React app with npm run build before starting a verification scenario.');
+  process.exit(1);
+}
+const entryPath = `/${bundleManifest['index.html'].file}`;
+const projectChunk = Object.entries(bundleManifest).find(([source, chunk]) =>
+  /ProjectPage/.test(source) || /ProjectPage/.test(chunk.name || ''))?.[1];
 const previewPaths = new Set(archive.projects.map(project => project.overview));
 const synthetic = scenario === 'many' ? Buffer.from(JSON.stringify({
   ...archive,
@@ -55,7 +65,7 @@ const futureProjects = scenario === 'future' ? (() => {
   return Buffer.from(JSON.stringify({ projects: [minimal, detailed] }));
 })() : null;
 
-const archiveServer = createArchiveServer();
+const archiveServer = createArchiveServer({ spaFallback: true });
 let failedOnce = false;
 
 function reply(req, res, status, text, type = 'text/plain; charset=utf-8') {
@@ -88,14 +98,14 @@ const server = createServer(async (req, res) => {
     reply(req, res, 503, 'Simulated metadata failure. Retry will succeed.');
     return;
   }
-  if (scenario === 'module-error' && pathname === '/app.js' && req.method === 'GET' && !failedOnce) {
+  if (scenario === 'module-error' && pathname === entryPath && req.method === 'GET' && !failedOnce) {
     failedOnce = true;
     console.log('[module-error] First app module request failed; a reload will succeed.');
     reply(req, res, 503, 'Simulated app module failure. Reload will succeed.');
     return;
   }
   const failingModule = scenario === 'viewer-error' ? '/assets/vendor/openseadragon.min.js'
-    : scenario === 'project-error' ? '/project.js' : null;
+    : scenario === 'project-error' && projectChunk ? `/${projectChunk.file}` : null;
   if (failingModule && pathname === failingModule && req.method === 'GET' && !failedOnce) {
     failedOnce = true;
     console.log(`[${scenario}] First ${failingModule} request failed; the next request will succeed.`);
