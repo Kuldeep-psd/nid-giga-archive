@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "assets": [
+    {
+      "path": "/downloads/garden-of-digital-delights.pdf",
+      "url": "https://github.com/Kuldeep-psd/nid-giga-archive/releases/download/archive-assets-v1/garden-of-digital-delights.pdf",
+      "bytes": 25049162,
+      "sha256": "ae6d34c8b3fcaaad43eee21be62e61ed68b7f60844669dc4158bda7deb1557f9"
+    },
+    {
+      "path": "/downloads/healthcare-systems-perspective.pdf",
+      "url": "https://github.com/Kuldeep-psd/nid-giga-archive/releases/download/archive-assets-v1/healthcare-systems-perspective.pdf",
+      "bytes": 3424869,
+      "sha256": "25a647c4f6a6a20600f8d6acccf478052522777238fa83d1f140e4127f5cf0ff"
+    },
+    {
+      "path": "/downloads/exodus-of-the-anthropocene.pdf",
+      "url": "https://github.com/Kuldeep-psd/nid-giga-archive/releases/download/archive-assets-v1/exodus-of-the-anthropocene.pdf",
+      "bytes": 12177719,
+      "sha256": "b2a00838420988172c3510d584068b3b6a35ce5aa538f9ffb3f911de487d37a4"
+    },
+    {
+      "path": "/downloads/fallen-through-the-fabric-of-family.pdf",
+      "url": "https://github.com/Kuldeep-psd/nid-giga-archive/releases/download/archive-assets-v1/fallen-through-the-fabric-of-family.pdf",
+      "bytes": 100545327,
+      "sha256": "d13e2e41a5d91179ba0a6a83be73e6e2602874af8460df3c91091356ee15ce07"
+    },
+    {
+      "path": "/downloads/happiness-celebration-of-transient-moments.pdf",
+      "url": "https://github.com/Kuldeep-psd/nid-giga-archive/releases/download/archive-assets-v1/happiness-celebration-of-transient-moments.pdf",
+      "bytes": 100288017,
+      "sha256": "496eb5ba3db7810b6738abff020097cd447f021e3b76383856fb3edb5b37dabe"
+    },
+    {
+      "path": "/downloads/the-silent-crisis.pdf",
+      "url": "https://github.com/Kuldeep-psd/nid-giga-archive/releases/download/archive-assets-v1/the-silent-crisis.pdf",
+      "bytes": 45115080,
+      "sha256": "eb379ed8d892ddc60b7ba42ca015e8e3c9f1ef8ad5d821f2cd85e218e48c7dfb"
+    },
+    {
+      "path": "/downloads/transcending-dualities-of-gender.pdf",
+      "url": "https://github.com/Kuldeep-psd/nid-giga-archive/releases/download/archive-assets-v1/transcending-dualities-of-gender.pdf",
+      "bytes": 38720314,
+      "sha256": "918a8c78ea3b6b58e5edc16672bd9bb9eb46626f9ec2a0bcd87b63bc8a9b3e48"
+    },
+    {
+      "path": "/downloads/house-of-vulnerability.pdf",
+      "url": "https://github.com/Kuldeep-psd/nid-giga-archive/releases/download/archive-assets-v1/house-of-vulnerability.pdf",
+      "bytes": 45480625,
+      "sha256": "23a8ceb6bb3e950f075627502574d58dc88b665b95929affdd8a85583b45beb8"
+    }
+  ]
+}

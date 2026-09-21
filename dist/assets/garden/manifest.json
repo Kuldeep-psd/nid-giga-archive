@@ -1,0 +1,14 @@
+{
+  "width": 28800,
+  "height": 7200,
+  "tileSize": 512,
+  "overlap": 1,
+  "format": "webp",
+  "maxLevel": 15,
+  "tileCount": 1179,
+  "tileBytes": 22481162,
+  "pdfBytes": 25049162,
+  "pdfSha256": "ae6d34c8b3fcaaad43eee21be62e61ed68b7f60844669dc4158bda7deb1557f9",
+  "overviewWidth": 2400,
+  "overviewHeight": 600
+}

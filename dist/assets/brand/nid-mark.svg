@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="749px" height="656px" viewBox="0 0 749 656" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Logo - National Institute of Design</title>
+    <desc>Created by Adrian Frutiger.</desc>
+    <defs></defs>
+    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#000000" cx="399.5" cy="118.5" r="70.5"></circle>
+        <polygon id="Path-2" fill="#000000" points="35.404819 203 350 203 350 609.458968"></polygon>
+        <path d="M452,609.458968 L452,203 L506.924966,203 C609.966408,203 698.107246,279.579226 698.107246,406.818555 C698.107246,536.414168 609.103516,609.458968 506.924966,609.458968 L452,609.458968 Z" id="D" fill="#000000"></path>
+    </g>
+</svg>

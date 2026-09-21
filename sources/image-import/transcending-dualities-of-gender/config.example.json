@@ -1,0 +1,17 @@
+{
+  "source": "input/Gigamap_Transcending Dualities of Gender Identity.png",
+  "assets": "dist/assets/transcending-dualities",
+  "manifest": "sources/image-import/transcending-dualities-of-gender/provenance.json",
+  "title": "Transcending Dualities of Gender",
+  "contributors": [
+    "Adweta Kesh",
+    "Animesh Jain",
+    "Karthikeya GS",
+    "Mrunal Deshmukh",
+    "Tanvi Palkar"
+  ],
+  "pdf": "output/pdf/transcending-dualities-of-gender.pdf",
+  "download": "dist/downloads/transcending-dualities-of-gender.pdf",
+  "ocr": "sources/image-import/transcending-dualities-of-gender/ocr.json",
+  "batch": 2023
+}

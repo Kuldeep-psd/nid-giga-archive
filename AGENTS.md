@@ -1,0 +1,15 @@
+# Giga Archive maintenance
+
+This is a minimal, local-first gigamap archive. All projects must use the same presentation and interactions.
+
+- Add gigamaps through `dist/data/archive.json` and their original assets. Start from `templates/gigamap.json`; never create a separate HTML page, route implementation, or CSS theme for an individual map.
+- `dist/project-template.js` owns page structure, section order, file-size labels and optional metadata presentation. `dist/project.js` owns the shared viewer and its loading, retry, keyboard, focus and section-navigation behaviour. Fixes here must apply to every map.
+- Use the approved 2023 details format on every map: one overview paragraph followed by methods, exactly Batch and Team in the facts column, then separate Contributors and Guided by rows and the batch back-link. Keep duration and institution in source metadata; they must not create extra fact rows. Merge any process text into the overview. Credit rows use the same spacing and separators on every page.
+- Use shared CSS rules and theme tokens. Adapt to artwork orientation and viewport width, without cropping or recolouring the maps. Preserve the original PDFs.
+- Omit unknown optional facts and credits from source metadata; never invent them. The shared page keeps both credit rows and uses “Not recorded” for missing credits or team size. Verify printed guide credits from the original artwork before treating them as unknown. Keep summaries, descriptive alternative text, useful domain/topic tags, valid dimensions and original downloads for every entry.
+- Do not add generic “Systems design”, “Systems thinking” or “Systems mapping” descriptors, site footers, visible result counters, “The complete map” labels, or project-specific decorative elements. The default landing page remains All gigamaps. Contact belongs only in About.
+- Run `npm run check` and `npm test` after catalog/template/viewer changes. Validation also runs before `npm start` and `npm run dev`. Verify affected pages at desktop and phone widths, including portrait artwork, optional metadata and section navigation.
+- Use temporary fixtures for scale and future-entry tests; never insert synthetic maps into the real archive. Keep the real local site running at http://127.0.0.1:4173/.
+- Keep original PDFs outside Git, distributed through the `archive-assets-v1` GitHub release. Register public URLs, exact sizes and SHA-256 hashes in `dist/data/downloads.json`; preserve existing asset URLs. Previews and Deep Zoom tiles remain in the repository. Do not commit generated `build/`, local ingestion configs or machine-specific paths.
+- Keep contribution links in `dist/site-config.js`. Leave `submissionFormUrl` as `null` until a real Google Form URL is supplied; never add a dummy link. Website code is MIT; map artwork and institutional marks are excluded from that license.
+- Run `npm run build` for deployment changes. Vercel serves the generated `build/` directory and redirects PDF requests to the release assets; it does not run the local Node server.

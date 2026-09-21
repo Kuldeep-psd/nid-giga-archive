@@ -1,0 +1,56 @@
+name: Submit a gigamap
+description: Suggest a map for the archive. No coding is required.
+title: "Map submission: "
+body:
+  - type: markdown
+    attributes:
+      value: "Share an original file through a public download link. Please preserve the artwork and its credits. The submission form on the website will provide another route once available."
+  - type: input
+    id: title
+    attributes:
+      label: Map title
+      description: Use the title printed on the artwork where possible.
+    validations:
+      required: true
+  - type: input
+    id: batch
+    attributes:
+      label: Batch year
+      placeholder: "2023"
+    validations:
+      required: true
+  - type: dropdown
+    id: department
+    attributes:
+      label: Department, if known
+      options:
+        - Not recorded
+        - Information Design
+        - Universal Design
+        - Other (please explain below)
+  - type: input
+    id: original
+    attributes:
+      label: Original file link
+      description: PDF preferred; a full-resolution PNG or JPEG is also welcome. Use a link accessible without a login.
+    validations:
+      required: true
+  - type: textarea
+    id: credits
+    attributes:
+      label: Contributor and guide credits
+      description: Copy the printed names, distinguishing contributors from guides. If unknown, say so; do not guess.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Subject and context
+      description: A short description and any useful source or credit notes. Avoid adding private contact details.
+  - type: checkboxes
+    id: sharing
+    attributes:
+      label: Sharing the work
+      options:
+        - label: I am entitled to share this file for inclusion in a public archive, with its attribution preserved.
+          required: true

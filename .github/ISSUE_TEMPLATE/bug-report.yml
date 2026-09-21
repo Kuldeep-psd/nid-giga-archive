@@ -1,0 +1,38 @@
+name: Website bug
+description: Report an interaction, loading or display problem.
+title: "Bug: "
+body:
+  - type: markdown
+    attributes:
+      value: "Share only public information. Please do not include passwords, tokens or private documents."
+  - type: input
+    id: page
+    attributes:
+      label: Affected page or map
+      description: Paste the page URL or name the map.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Explain what you clicked or typed, in order.
+    validations:
+      required: true
+  - type: textarea
+    id: behaviour
+    attributes:
+      label: Expected and actual behaviour
+      description: Describe what should happen and what happened instead.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device
+      placeholder: "For example: Safari on iPhone, Chrome on Windows"
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or other details
+      description: Optional. Remove private information before attaching a screenshot.

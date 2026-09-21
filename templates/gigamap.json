@@ -1,0 +1,18 @@
+{
+  "id": "replace-with-map-id",
+  "title": "Replace with the gigamap title",
+  "batch": 2026,
+  "summary": "Replace with one concise sentence about the subject.",
+  "description": "Replace with verified context from the gigamap or its contributors.",
+  "domains": ["Replace with the broad subject area"],
+  "topics": ["Replace with a specific subject"],
+  "tags": ["Replace with a concise card label"],
+  "overview": "/assets/replace-with-map-id/overview.webp",
+  "tileSource": "/assets/replace-with-map-id/map.dzi",
+  "download": "/downloads/replace-with-map-id.pdf",
+  "downloadBytes": 1,
+  "imageAlt": "Replace with a concise description of the visual map.",
+  "width": 1,
+  "height": 1,
+  "regions": []
+}

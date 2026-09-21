@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Private rights or privacy concern
+    url: https://github.com/Kuldeep-psd/nid-giga-archive/blob/main/CONTENT_RIGHTS.md#corrections-and-removal-requests
+    about: Find the maintainer contact for concerns that should not be posted in a public issue.

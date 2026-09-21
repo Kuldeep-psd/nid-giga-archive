@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f8f9fa">
+  <title>NID Giga Archive — Batchwise gigamaps</title>
+  <meta name="description" content="An evolving archive of gigamaps. Browse by batch, search projects, explore the details, and download the original maps.">
+  <link rel="icon" type="image/svg+xml" href="/assets/brand/nid-mark.svg">
+  <script src="/theme.js"></script>
+  <link rel="preload" href="/assets/fonts/dm-sans-latin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/fonts.css">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/responsive.css">
+  <link rel="stylesheet" href="/search.css">
+  <link rel="stylesheet" href="/dashboard.css">
+  <link rel="stylesheet" href="/polish.css">
+  <script src="/boot.js"></script>
+  <script id="archive-app" type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="NID Giga Archive home"><span>Giga Archive<span class="brand-dot">.</span></span></a>
+    <img class="institution-logo" src="/assets/brand/nid-logo.svg" width="400" height="56" alt="National Institute of Design">
+    <nav class="header-nav" aria-label="Information">
+      <a class="header-link" href="/#about">About</a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Night mode" aria-pressed="false" title="Switch to night mode"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 13.2A8.5 8.5 0 0 1 10.8 3.5a8.5 8.5 0 1 0 9.7 9.7Z"/></svg></button>
+    </nav>
+  </header>
+  <div class="workspace">
+    <aside class="sidebar" aria-label="Archive navigation">
+      <p class="nav-label">COLLECTION</p>
+      <a class="nav-item" data-nav="all" href="/?batch=all"><span>All gigamaps</span><span class="nav-count" id="total-count"></span></a>
+      <div class="batch-heading"><p class="nav-label">BATCHES</p><span class="nav-label">↓</span></div>
+      <nav id="batch-nav" aria-label="Batches"><span class="loading-shape loading-nav" aria-hidden="true"></span></nav>
+    </aside>
+    <main id="main" tabindex="-1">
+      <div id="content" aria-busy="true"><div class="archive-loading"><p class="sr-only" role="status">Opening the archive…</p><div aria-hidden="true"><span class="loading-shape loading-title"></span><span class="loading-shape loading-search"></span><div class="loading-facets"><span class="loading-shape"></span><span class="loading-shape"></span><span class="loading-shape"></span></div><div class="loading-grid"><span class="loading-shape loading-card"></span><span class="loading-shape loading-card"></span><span class="loading-shape loading-card"></span><span class="loading-shape loading-card"></span></div></div></div></div>
+      <noscript>This archive needs JavaScript for search and the map viewer. <a href="/downloads/garden-of-digital-delights.pdf">Download The Garden of Digital Delights PDF</a>.</noscript>
+    </main>
+  </div>
+  <template id="loading-template"><div class="archive-loading"><p class="sr-only" role="status">Opening the archive…</p><div aria-hidden="true"><span class="loading-shape loading-title"></span><span class="loading-shape loading-search"></span><div class="loading-facets"><span class="loading-shape"></span><span class="loading-shape"></span><span class="loading-shape"></span></div><div class="loading-grid"><span class="loading-shape loading-card"></span><span class="loading-shape loading-card"></span><span class="loading-shape loading-card"></span><span class="loading-shape loading-card"></span></div></div></div></template>
+  <dialog id="map-dialog" aria-labelledby="map-title"></dialog>
+</body>
+</html>

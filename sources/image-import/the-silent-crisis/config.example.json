@@ -1,0 +1,19 @@
+{
+  "source": "input/The Silent Crisis.png",
+  "assets": "dist/assets/silent-crisis",
+  "manifest": "sources/image-import/the-silent-crisis/provenance.json",
+  "title": "The Silent Crisis",
+  "contributors": [
+    "Ankita",
+    "Ajinkya",
+    "Geetanjali",
+    "Harsh",
+    "Himanshu",
+    "Preksha",
+    "Rucha"
+  ],
+  "pdf": "output/pdf/the-silent-crisis.pdf",
+  "download": "dist/downloads/the-silent-crisis.pdf",
+  "ocr": "sources/image-import/the-silent-crisis/ocr.json",
+  "batch": 2023
+}

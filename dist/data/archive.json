@@ -1,0 +1,736 @@
+{
+  "projects": [
+    {
+      "id": "garden-of-digital-delights",
+      "title": "The Garden of Digital Delights",
+      "batch": 2026,
+      "domains": [
+        "Technology"
+      ],
+      "topics": [
+        "Digital life",
+        "Cloud infrastructure"
+      ],
+      "summary": "Mapping the systems behind our digital lives.",
+      "description": "A ten-week exploration of the cloud, its infrastructure, and the relationships that shape our digital world. This collaborative gigamap brings research, causal connections, and possibilities for intervention into one shared view.",
+      "teamSize": 6,
+      "duration": "10 weeks",
+      "tags": [
+        "Digital life",
+        "Cloud infrastructure"
+      ],
+      "methods": [
+        "Causal loops",
+        "ZIP analysis",
+        "Research",
+        "Intervention framework"
+      ],
+      "overview": "/assets/garden/overview.webp",
+      "cover": "/assets/garden/cover.webp",
+      "tileSource": "/assets/garden/map.dzi",
+      "download": "/downloads/garden-of-digital-delights.pdf",
+      "downloadBytes": 25049162,
+      "regions": [
+        {
+          "id": "connections",
+          "title": "Connections & loops",
+          "description": "Follow the relationships between digital life and the infrastructure behind it.",
+          "bounds": [
+            0.192,
+            0,
+            0.186,
+            0.25
+          ]
+        },
+        {
+          "id": "research",
+          "title": "Research & findings",
+          "description": "Explore the central garden of research, informed by ZIP analysis.",
+          "bounds": [
+            0.38,
+            0,
+            0.43,
+            0.25
+          ]
+        },
+        {
+          "id": "framework",
+          "title": "Solution framework",
+          "description": "See the shared framework for individual design interventions.",
+          "bounds": [
+            0.815,
+            0,
+            0.185,
+            0.25
+          ]
+        }
+      ],
+      "institution": "National Institute of Design",
+      "contributors": [
+        "Kuldeep Singh",
+        "Hari Chandana Gundimeda",
+        "Shravani Shetye",
+        "Viva Jeph",
+        "Shweta Kamal",
+        "Bhavana Harish"
+      ],
+      "imageAlt": "Full Garden of Digital Delights map, with causal connections, a research garden, and an intervention framework",
+      "width": 28800,
+      "height": 7200,
+      "process": "The process moved from causal loops and ZIP analysis to research, a shared solution framework, and individual interventions.",
+      "guides": [
+        "Chakradhar Saswade",
+        "Balaji Rengarajan",
+        "Sridhar Dhulipala",
+        "Vinod Kumar",
+        "Amit Kapoor"
+      ]
+    },
+    {
+      "id": "healthcare-systems-perspective",
+      "title": "Healthcare: A Systems Perspective",
+      "batch": 2023,
+      "domains": [
+        "Healthcare"
+      ],
+      "topics": [
+        "Diabetes",
+        "Chronic conditions",
+        "Patient experience",
+        "Healthcare systems",
+        "India"
+      ],
+      "summary": "A systems view of diabetes care and the experience of living with a chronic condition.",
+      "description": "A systems perspective on diabetes care in India, exploring how healthcare, awareness, support, and everyday life shape the transition to living with a chronic condition. The map connects a current system view, stakeholder relationships, and the patient journey to identify spaces for design intervention.",
+      "teamSize": 5,
+      "tags": [
+        "Diabetes",
+        "Healthcare systems"
+      ],
+      "methods": [
+        "Causal relationship mapping",
+        "Stakeholder mapping",
+        "Journey mapping",
+        "Research"
+      ],
+      "overview": "/assets/healthcare/overview.webp",
+      "tileSource": "/assets/healthcare/map.dzi",
+      "download": "/downloads/healthcare-systems-perspective.pdf",
+      "downloadBytes": 3424869,
+      "regions": [
+        {
+          "id": "system",
+          "title": "Context & system view",
+          "description": "Explore the background and relationships shaping diabetes care.",
+          "bounds": [
+            0,
+            0,
+            0.39,
+            0.353310323187951
+          ]
+        },
+        {
+          "id": "stakeholders",
+          "title": "Process & stakeholders",
+          "description": "Read the problem definition, design process, and stakeholder relationships.",
+          "bounds": [
+            0.392,
+            0,
+            0.192,
+            0.353310323187951
+          ]
+        },
+        {
+          "id": "journey",
+          "title": "Patient journey",
+          "description": "Follow the journey from a healthy self to living with a chronic condition.",
+          "bounds": [
+            0.59,
+            0,
+            0.41,
+            0.353310323187951
+          ]
+        }
+      ],
+      "institution": "National Institute of Design",
+      "contributors": [
+        "Gauri Pradip Pradhan",
+        "Jaya Prabhakar",
+        "Prashant Pradhan",
+        "Thejashwini D",
+        "Yadu CL"
+      ],
+      "guides": [
+        "Balaji Rangarajan",
+        "Chakradhar Saswade",
+        "Sridhar Dulipala"
+      ],
+      "imageAlt": "Healthcare gigamap showing diabetes in India, a current system view, stakeholder relationships, and the patient journey",
+      "width": 9561,
+      "height": 3378
+    },
+    {
+      "id": "exodus-of-the-anthropocene",
+      "title": "Exodus of the Anthropocene",
+      "batch": 2023,
+      "domains": [
+        "Environment"
+      ],
+      "topics": [
+        "Climate change",
+        "Human migration",
+        "Livability",
+        "India"
+      ],
+      "summary": "Mapping migration and climate change in India.",
+      "description": "A systems view of the relationship between climate change, livability, and human migration in India. The gigamap connects climate migration hotspots and environmental stressors with a human livability framework, stakeholder roles, and case studies from Beed and Mumbai.",
+      "teamSize": 3,
+      "tags": [
+        "Climate change",
+        "Human migration",
+        "India"
+      ],
+      "methods": [
+        "Stakeholder mapping",
+        "Empathy mapping",
+        "Geospatial analysis",
+        "Research"
+      ],
+      "overview": "/assets/climate-migration/overview.webp",
+      "tileSource": "/assets/climate-migration/map.dzi",
+      "download": "/downloads/exodus-of-the-anthropocene.pdf",
+      "downloadBytes": 12177719,
+      "regions": [
+        {
+          "id": "hotspots",
+          "title": "Context & climate hotspots",
+          "description": "Explore the background and geography of climate migration in India.",
+          "bounds": [
+            0,
+            0,
+            0.225,
+            0.3536666666666667
+          ]
+        },
+        {
+          "id": "livability",
+          "title": "Livability framework",
+          "description": "Trace connections between environmental stressors, livability, and migration.",
+          "bounds": [
+            0.228,
+            0,
+            0.461,
+            0.3536666666666667
+          ]
+        },
+        {
+          "id": "impacts",
+          "title": "Impacts & case studies",
+          "description": "Explore migration challenges, stakeholder roles, and case studies from Beed and Mumbai.",
+          "bounds": [
+            0.689,
+            0,
+            0.311,
+            0.3536666666666667
+          ]
+        }
+      ],
+      "contributors": [
+        "Sparsh Verma",
+        "Neha Agnihotri",
+        "Preeti Shibu"
+      ],
+      "guides": [
+        "Sridhar Dhulipala",
+        "Chakradhar Saswade",
+        "Balaji Rangarajan"
+      ],
+      "imageAlt": "Exodus of the Anthropocene gigamap showing climate migration hotspots in India, a human livability framework, stakeholders, and case studies from Beed and Mumbai",
+      "width": 18000,
+      "height": 6366
+    },
+    {
+      "id": "fallen-through-the-fabric-of-family",
+      "title": "Fallen through the Fabric of Family",
+      "batch": 2023,
+      "domains": [
+        "Social systems"
+      ],
+      "topics": [
+        "Child abandonment",
+        "Child welfare",
+        "Family support",
+        "India"
+      ],
+      "summary": "A systemic study on India’s child abandonment crisis.",
+      "description": "The gigamap examines child abandonment in India through the metaphor of a family’s fabric. It connects causes, stakeholder relationships, post-abandonment outcomes, and opportunities for design intervention.",
+      "teamSize": 4,
+      "tags": [
+        "Child abandonment",
+        "Child welfare",
+        "Family support"
+      ],
+      "methods": [
+        "Causal relationship mapping",
+        "Stakeholder mapping",
+        "Research",
+        "Leverage point analysis"
+      ],
+      "overview": "/assets/child-abandonment/overview.webp",
+      "tileSource": "/assets/child-abandonment/map.dzi",
+      "download": "/downloads/fallen-through-the-fabric-of-family.pdf",
+      "downloadBytes": 100545327,
+      "regions": [
+        {
+          "id": "overview",
+          "title": "Context & overview",
+          "description": "Read the context and overview of child abandonment in India.",
+          "bounds": [
+            0.035,
+            0.025,
+            0.93,
+            0.535
+          ]
+        },
+        {
+          "id": "family",
+          "title": "Fabric of Family",
+          "description": "Explore the relationships and responsibilities represented by the family’s fabric.",
+          "bounds": [
+            0,
+            0.55,
+            1,
+            0.44
+          ]
+        },
+        {
+          "id": "causes",
+          "title": "Causes & stakeholders",
+          "description": "Explore the causal map and stakeholder relationships in the Broken Net.",
+          "bounds": [
+            0,
+            0.84,
+            1,
+            0.7
+          ]
+        },
+        {
+          "id": "outcomes",
+          "title": "Support & outcomes",
+          "description": "Read the Net of Redemption and the system of post-abandonment outcomes.",
+          "bounds": [
+            0.035,
+            1.45,
+            0.93,
+            0.42
+          ]
+        },
+        {
+          "id": "survival",
+          "title": "Survival & risks",
+          "description": "Explore the Net of Survival and the risks described in the map.",
+          "bounds": [
+            0,
+            1.8,
+            1,
+            0.4
+          ]
+        },
+        {
+          "id": "leverage",
+          "title": "Leverage points",
+          "description": "Review the potential design opportunity areas identified by the team.",
+          "bounds": [
+            0.04,
+            2.215,
+            0.92,
+            0.13
+          ]
+        }
+      ],
+      "institution": "National Institute of Design",
+      "contributors": [
+        "Aniket Malge",
+        "Arathy Aluckal",
+        "Parvathy Arangath",
+        "Sarvesh RV"
+      ],
+      "guides": [
+        "Tulip Sinha",
+        "Sridhar Dhulipala",
+        "Chakradhar Saswade",
+        "Balaji Rangarajan",
+        "Noopur Verma"
+      ],
+      "imageAlt": "Portrait gigamap about child abandonment in India, using woven family fabric, causal maps, stakeholder relationships, and design intervention points",
+      "width": 7632,
+      "height": 18000
+    },
+    {
+      "id": "happiness-celebration-of-transient-moments",
+      "title": "Happiness: Celebration of transient moments!",
+      "batch": 2023,
+      "domains": [
+        "Psychology",
+        "Wellbeing"
+      ],
+      "topics": [
+        "Happiness",
+        "Wellbeing",
+        "Human emotions",
+        "Culture",
+        "Mental health"
+      ],
+      "summary": "Exploring the personal, social and cultural factors that shape happiness and wellbeing.",
+      "description": "The map brings together cultural perspectives, scientific explanations, psychological frameworks and philosophical ideas about happiness. A central network connects 15 determinants with their influencing factors, followed by an emotion canvas and a happiness framework.",
+      "tags": [
+        "Happiness",
+        "Wellbeing",
+        "Human emotions"
+      ],
+      "methods": [
+        "Research",
+        "Relationship mapping",
+        "Emotion mapping"
+      ],
+      "overview": "/assets/happiness/overview.webp",
+      "tileSource": "/assets/happiness/map.dzi",
+      "download": "/downloads/happiness-celebration-of-transient-moments.pdf",
+      "regions": [
+        {
+          "id": "understanding",
+          "title": "Understanding",
+          "description": "Explore cultural, scientific, psychological and philosophical perspectives on happiness.",
+          "bounds": [
+            0.02,
+            0.01,
+            0.44,
+            0.326
+          ]
+        },
+        {
+          "id": "analysis",
+          "title": "Analysis",
+          "description": "Trace the network of 15 happiness determinants and their influencing factors.",
+          "bounds": [
+            0.458,
+            0.01,
+            0.38,
+            0.326
+          ]
+        },
+        {
+          "id": "synthesis",
+          "title": "Synthesis",
+          "description": "Read the emotion canvas and the happiness framework.",
+          "bounds": [
+            0.85,
+            0.012,
+            0.142,
+            0.323
+          ]
+        }
+      ],
+      "institution": "National Institute of Design",
+      "contributors": [
+        "Anand Vijayan",
+        "Dhashna Moorthy",
+        "Kowsalya T",
+        "Janani Parthipan",
+        "Rajesh"
+      ],
+      "guides": [
+        "Sridhar Dhulipala",
+        "Balaji Rangarajan",
+        "Chakradhar Saswade",
+        "Tulip Sinha",
+        "Noopur Verma"
+      ],
+      "imageAlt": "Wide gigamap with a world happiness atlas and explanatory diagrams on the left, a branching network of happiness determinants in the centre, and emotion-canvas and happiness-framework diagrams on the right.",
+      "width": 18000,
+      "height": 6366,
+      "downloadBytes": 100288017
+    },
+    {
+      "title": "The Silent Crisis",
+      "batch": 2023,
+      "summary": "Exploring the ecological and human costs of biodiversity loss and conservation.",
+      "description": "The map connects biodiversity and ecosystem services with the economic, social, cultural, political and emotional costs of neglect and conservation. Its central tree traces these relationships, alongside stakeholder roles and a case study of community commons in the semi-arid regions of Chikkaballapur, Karnataka.",
+      "domains": [
+        "Environment"
+      ],
+      "topics": [
+        "Biodiversity loss",
+        "Conservation",
+        "Ecosystem services",
+        "Community commons",
+        "Karnataka"
+      ],
+      "tags": [
+        "Biodiversity loss",
+        "Conservation",
+        "Community commons"
+      ],
+      "methods": [
+        "Causal relationship mapping",
+        "Stakeholder mapping",
+        "Case studies"
+      ],
+      "contributors": [
+        "Ankita",
+        "Ajinkya",
+        "Geetanjali",
+        "Harsh",
+        "Himanshu",
+        "Preksha",
+        "Rucha"
+      ],
+      "guides": [
+        "Sridhar Dhulipala",
+        "Balaji Rangarajan",
+        "Chakradhar Saswade",
+        "Tulip Sinha",
+        "Noopur Verma"
+      ],
+      "imageAlt": "Wide charcoal gigamap with biodiversity charts on the left, a branching tree linking ecological and human costs in the centre, and a Karnataka map, community commons case study and conservation opportunities on the right.",
+      "regions": [
+        {
+          "id": "biodiversity",
+          "title": "Biodiversity & ecosystem services",
+          "description": "Explore the context of biodiversity loss and the ecosystem services that support human life.",
+          "bounds": [
+            0,
+            0,
+            0.278,
+            0.23577777777777778
+          ]
+        },
+        {
+          "id": "cost-and-care",
+          "title": "The tree of cost and care",
+          "description": "Trace the costs of neglect and conservation, causal relationships and stakeholder roles.",
+          "bounds": [
+            0.28,
+            0,
+            0.439,
+            0.23577777777777778
+          ]
+        },
+        {
+          "id": "commons",
+          "title": "Commons & conservation",
+          "description": "Explore community commons in Chikkaballapur, Karnataka, and the proposed path ahead.",
+          "bounds": [
+            0.725,
+            0,
+            0.275,
+            0.23577777777777778
+          ]
+        }
+      ],
+      "id": "the-silent-crisis",
+      "overview": "/assets/silent-crisis/overview.webp",
+      "tileSource": "/assets/silent-crisis/map.dzi",
+      "download": "/downloads/the-silent-crisis.pdf",
+      "width": 18000,
+      "height": 4244,
+      "downloadBytes": 45115080,
+      "ocrText": "1980\n1990\n2000\n2010\n2020\n2030\n2040\n2050\n2060\n2070\n2080\n2090\n2100\n1.0\nManaging the Commons of\nwhat is biodiversity?\nnd care\nthe price\nThe tree of cost and care\nwhat are commons?\nthe Semi-Arid Regions of\nFIXES THAT FAIL\nwe pay for conservation\nIf conservation efforts are\n0.8\ncontinued, the curve may\nbend upwards from 2070.\nAhariety of living\nA variety of living organisms, their genetic makeup,\n• genetic makeup, and the intricate ecosystems they\nCOST OF CONSERVING\nCOST OF NEGLECTING\nCOST OF CON\nF CONSERVING\nChikkaballapur\nCommons are vital community-owned\ninhabit.\nReservation &\nresources that sustain millions in India,\nHAKKI PIKKI TRIBE'S FORCED MIGRATION\nProtection Policies\nTRAGEDY OF COMMONS\nproviding livelihoods, food, water, and\n0.6\nThe best conservation efforts\nA web of interconnections, where every organism, pla\nevery organism, plays a vital role in maintaining the\nSOCIAL\nECONOMIC\nwill take until 2050 to even\nbegin flattening out the curve.\nsafety nets. Despite indigenous efforts\ndelicate balance of ecosystems, fuelling the resilien\nelling the resilience, adaptability, and stability of our\nCanopy System\nto restore and conserve these\nif conservation efforts made actively.\nplanet and endowing us with the precious ecosyste\nrecious ecosystem services upon which human\nUnsustainable\nLeaving their\nBelonging to\nBecoming their\n*MEAN SPECIES ABUNDANCE ~ 0.4\nPractices\nNatural Disasters\necosystems, mainstream policies\nRehabilitation\n2023\nsocieties and our very existence depend.\nculture behind\nresource's guardians\nForced\na new land\n• Farmer's profit\nTangible Costs:\ndisregard them as 'wastelands' and\nO.4\nEvictions\nPoverty\ndeny secure tenure. Macro-level land\nForced labour\nLand\nChild labour\nCosts\nLivestock\nAvailability\nHuman Migration & Displacen\nuse decisions often overlook the social,\nGrazing\nChild Abandonment\nResearch, monitoring\nSocial\nOpportunity Costs\nBalegowdanahalli village becomes a new home for the forced migrants- Hakki Pikkis tr\nigrants- Hakki Pikkis tribe from Gujarat. Restoring the\nCULTURAL\nDirect Financial Costs\nTraditional •\nGDP\n& surveillance\n+\nCapital\ncultural, ecological, and economic\nif no conservation measure is taken.\nindividual\n+ interactions between\ninteractions between\nvillage's common lands enhanced their sense of belonging, livelihoods, and decision-ma\nhoods, and decision-making power. They actively\n• Knowledge\nHuman\n0.2\n*MEAN SPECIES ABUNDANCE ~ 0.1\nMarginalisation\nSocial Divide\nSoil\nvalues associated with Commons.\nCost\ncontributed to land restoration and protection, thus acting as custodians of the land.\nAbandonment\nProfit\nthose lifeforms\nfertility\nDebt Bondage\nDelay\nlifeforms\nInternational co-operation\nBenefits\nHuman Trafficking\nOn-field conservation\nSocial Segregation\nCommunity\n& public awareness\nprograms & management\nForced Sex Work\nGrowth\nIllegal Mining\nPOLITICAL\nRecession\n(Sand theft)\nDomestic Burden\nProductivity\n0.0\n*GLOBIO's Mean Species Abundance (MSA) is a metric that measures local\nInflation\nthe gains\nbiodiversity intactness by comparing the average abundance, richness, or\nDebt\ngeographic extent of species under pressure to their abundance in an\nConflict\nHeat Waves\nVulnerable\nSand miner's\nundisturbed situation. Taking into account multiplicative effects of pressures, it\nGround Line\nDomestic\nprofit\nis at present one of the most sensitive indicators to measure biodiversity.\nCommunities\nCommercial\nFinancial\nChild Mortality\nUse\nServices\nChild\nPlanning\nof conservation practices\nAgency\nDevelopment\nQuality\nHealth\nIntermediate\nRepresentation\nPrenatal\nProvisions\nStability\nof Life\nLiteracy\n1200 M\nIntangible Costs:\nCHIKKABALLAPUR\nforest dependent\nEcosystem\nLifestyle\nForced Evictions\nCognitive\nTRANSFORMING THE COMMONS LANDSCAPE\nThe Silent\nThe Sile\nPolitical\nMorbidity\nCultural Heritage\nEducation\nA district in the state of\nhuman livelihoods directly impacted\nHygiene\nlent\nResilience to environmental,\nScientific\nViolence\nJudicial\nLong-term socio-\nKarnataka, is located in a semi-\nInterventions\nAverage Decline in Population Abundance (% compared to 1970)\n-36%\neconomic benefits\nclimate change & it's impacts\nAccess\nBelongingness\nadvancement\narid region, characterised by low\nmarine water species\n1000 M\nInnovation\nMortality\nRoot System\nTech\nIllegal Mining (sand theft)\nLegal\nand erratic rainfall, sparse\nTHREATENED\nFisherman\nevergreen\nProduction\nforest\nECOLOGY\nDigital Divide\nPhysical\nLand Abandonment\nvegetation, and fragile\nTraditional\nExploitation\nEmpowerment\nRealising the\n-38%\nBiomagnification\necosystems. The aridity poses\nKnowledge\nsemi evergreen\nterrestrial species\nCrisis.\n370 M\nResource\nsignificant constraints on water\nof the land\nthrough awareness\nlong-term gains\nEMOTIONAL\nTechnology\nDiseases\nindigenous people\nPharmaceuticals\nMalnutrition\nReligious\nmoist deciduous\nPurchasing\navailability for agriculture, making\nNon-native\nTextile\nObvious costs\nPower\ninvasive species\nNeglecting biodiversity has wide-ranging economic, social, and envir\nconomic, social, and environmental repercussions, while conserving it\nsustainable land and water\n-58%\ndry deciduous\nEnergy\nmanagement essential for the\noffers long-term benefits. These benefits, such as ecosystem servic\nsuch as ecosystem services, economic opportunities, and well-being,\nglobal species\nSpecies Migration\nInter-generational Trauma\nUntil recently, arguments for biodiversity\nCrafts\nmap of\nregion's livelihoods and food\noften surpass the costs of conservation. Prioritizing proactive biodiv\nioritizing proactive biodiversity conservation is crucial for a sustainable\nByraganahalli's commons, once a mined wasteland, became a thriving plantation throu\nriving plantation through community efforts.\nManufac-\nSanitation\nImmunity\nkarnataka\nscrub\n3000 M\nconservation focused on ecological\nturing\nRecognizing the ecosystem services it provided, the community took pride in their wol\n/ took pride in their work and felt a deep sense of\nfuture.\nsecurity.\nLivelihood\nAnimal Conflict\nmedically dependent\nTransport\ncosts like uniqueness, rarity, and\nresponsibility.\nIdentity\nNutrition\nLoss of Identity\nextinction threats. However, it is crucial\nHabitat Fragmentation\nIntrastructure\nDisease\n-81%\nto emphasize how biodiversity sustains\nDeforestation\nMental\n2600 M\nFood\nPrevention\nDisruption of\nfresh water species\nhuman existence and enhances quality\nsmallholder farmers\nSecurity\nplexities of\nfood chain\nUnraveling the Complexiti\nUnraveling the Complexities of\nof life. The question of the societal\nInaccessibility of commons due to\nInadequate Stakeholder\nLimited accountability\ncosts of neglecting biodiversity and\nHabitat\nits loss has become increasingly\nlack of awareness on legal rights &\nEngagement and Community\nfor rehabilitation\nThe Invisible Pitfalls:\n1970\n2015\nimportant.\nsecure tenure, & it's privatisation.\nCollaboration\nlosses\nBiodiversity Loss\nSrc: European Economic Area\nOverlooking Social & Cultural\nUnseen costs\nInequitable Distribution of Benefits\nLack of Ecological\nInternational\nDisplacement, Loss of\n970,000\nOrganizations\n(UN, WWF)\nDimensions in Biodiversity Policies\nersity Policies\nINSECTS\nof Ecological Services and\nTraditional Knowledge, and\nUnderstanding and Limited\n(beetles, butterflies,\nThe analysis reveals that the true cost\nbees, flies)\nConservation Policies\nLivelihoods\nEffectiveness\nof biodiversity loss extends beyond\nCentral Government\n(Forest, Irrigation\nDepartments etc.)\nthe ecological realm, encompassing\nPrivate Sector\nPOLICY\nMunicipal\nVillage\nFunding (CSR)\n270,000\npolitical, economic, social, cultural,\nAID &\nCorporations\nInstitutions\nDECISIONS\nAWARENESS\nPLANTS\nand emotional dimensions. Human\n(trees, crops, shrubs,\ncreepers)\nactivities degrade ecosystem services,\nimpacting society and political stability\nPlanning &\nUrban Citizen\nGroups\n45,000\n1.74 M\nby exacerbating social segregation,\nAuthorities\nPathogen\nCarbon\nFish\nCrop\nFossil\nRaw\nWater\nNatural Disaster\nAir\nVERTEBRATES\nspecies\nRecreation\nMinerals\nBiomass\nTimber & Wood\nMedicine\nFibre\nSilt Sand\nIn the harmonious interplay of our planet's intricate\nCrop Resilience\nAesthetics\nStudents\ninequity, and poverty.\nRemoval\nCycle\nYield\nFuels\nMaterials\nRecharge\nModeration\n(humans, fish, birds,\nreptiles, mammals)\nResearch and\nweb of life, human activities have emerged as a\nGram Panchayat\nAcademia\nScenery\nforce of unparalleled magnitude. Our endeavours,\n<4,000\nManure\nFood Chain\nState Government\nthe path\nstakeholders\n01.\n02.\n03.\n04.\nBACTERIA\n05.\nwhile forging remarkable progress and\n(coccus, vibrio,\nmap\nWildlife\nsacillus spirillum)\nPhotographers\nNGOs &\nDistrict Authorities\nVolunteers\n70,000\nadvancements, have also inadvertently set in motion\nInvasive\nBiodiversity\nPest\nWaterflow\nGenetic\nWaste\nDecomp-\nGermplasm\nPopulation\nPollutants\nErosion\nGlacial\nFUNGI\nDetoxification\nSpecies\nLightning Blast\nBioremediation\nFertility\nMaintenance\nControl\nahead:\nVariability\nDisposal\nosition\nProtection\nFiltering\nRegulation\nMelt\n(zygomycetes,\nRECREATION & BUSINESS\na silent crisis of biodiversity loss, whose\nascomycete)\nLIMITS TO\nconsequences may remain discreet until the crisis\nPromote Awareness of\nImproved Coordination\nEmpowerment for\nFoster Sustainable\nGROWTH\n370,000\nMedia\n80,000\nGroundwater\nreaches a crescendo.\nPhotosynthesis\nand Understanding:\nChoices & Connection\nSecure Ownership:\nEcological Impact:\nEngagement in\nOTHER ANIMALS\nSequestration\n(Humankind & All\nPROTISTS\nPollination\nliving beings)\n(algae, amoebas,\n(sponges, arthropods,\nConservation Policies:\nplasmodium)\nechinoderms)\nto Land:\nHOW TO READ THE TREE?\nForest Dwellers &\nWe stand at a precipice, a critical juncture where\nTraditional Healers\nLIVELIHOOD\nAtmospheric\nArtisans\nDissolved\nScavenging\nTidal\nNutrient\nRiperian\nWastewater\nNatural\nClimate\nSunlight\nDecom-\nXXX\nOxygen\nEnhance interdepartmental\nEmpower rural and tribal\nRevive the connection to the\nCurrents\nCycling\nProvisioning\nBuffer\nManagement\nStabilization Migration\nRaise awareness about\nInfrastructure\nMaintainance\nurgent action and unwavering dedication to\ncoordination and understanding\ncommunities through legal and\nconsumption, supply chains,\ndevelopment of holistic\nland, promote awareness, and\nare ecosystem services?\nFishermen\nLivestock Rearers\nwhat are ecosystem services?\nKeywords\nUrbanisation\nwhat are ecos\nReinforcing Relations\nof ecological, social, cultural,\nfinancial literacy to secure\nencourage responsible\nand ecological impact by\nbiodiversity conservation\nbiodiversity conservation are not just noble\nrations, but absolute necessities for the\nAlgal Bloom\nIndustries\nFarmers\n(Pharmaceutical,\npolitical, emotional, and\ntenurial ownership, avoid debt\ndecision-making for sustainable\nfostering stronger consumer-\npolicies that prioritize\naspirations, but absolute necessities for the\nAgriculture,\nActionable gaps to fill for positive\nReligious Groups\nCosmetics)\nOpposing Relations\neconomic impacts to inform\ntraps, and actively protect\nchoices. Revitalize urban\nproducer relationships and\ncommunity well-being and\nsurvival of our own existence and the perpetuation\nSoil Formation\nSUSTENANCE\nchange in Biodiversity Conservation\npolicy and development\necosystems for equitable\ncommons for the well-being of\npromoting local consumption\nHuman Costs\nconservation efforts.\nLand Owners\ndecisions.\nimpact.\ncommunities.\npractices.\nof the rich tapestry of life that envelops our world.\nHuman Interventions\nTourists\nEcosystem services such as pollin\nices such as pollination, water purification, nutrient &\nLand Availability\nclimate regulation, atmospheric &\non, atmospheric & dissolved oxygen maintenance, soil\nfertility etc. form the foundation t\nn the foundation that sustains and grows the tree of\nlife, industries and development\nand development activities. Ecosystem services\nDEPENDANTS\nClimate Change\nPollution\nPopulation Growth\nCommercialisation\nIndustrialisation\nConsumerism\ndevelopment activities are key to\nctivities are key to development, not an opposing\nforce!\nGUIDED BY: SRIDHAR DHULIPALA, PRO\nHAR DHULIPALA, PROF, BALAJI RANGARAJAN, PROF. CHAKRADHAR SASWADE, PROF, TULIP SINHA, N\nROF. TULIP SINHA, NOOPUR VERMA\nTEAM: ANKITA, AJINKYA, GEETANJALI, HARSH, F\nEETANJALI, HARSH, HIMANSHU, PREKSHA, RUCHA"
+    },
+    {
+      "id": "transcending-dualities-of-gender",
+      "title": "Transcending Dualities of Gender",
+      "batch": 2023,
+      "domains": [
+        "Social systems"
+      ],
+      "topics": [
+        "Gender identity",
+        "Transgender experiences",
+        "Social inclusion",
+        "India"
+      ],
+      "summary": "Mapping the social, cultural, and legal influences on the lives of trans people in India.",
+      "description": "The map brings together gender identity, historical and legal context, individual life journeys, and an influence map. It traces relationships among education, healthcare, livelihoods, family support, and public policy, then identifies stakeholders and opportunities for change.",
+      "tags": [
+        "Gender identity",
+        "Social inclusion"
+      ],
+      "methods": [
+        "Journey mapping",
+        "Stakeholder mapping",
+        "Causal loops"
+      ],
+      "duration": "8 weeks",
+      "overview": "/assets/transcending-dualities/overview.webp",
+      "tileSource": "/assets/transcending-dualities/map.dzi",
+      "download": "/downloads/transcending-dualities-of-gender.pdf",
+      "regions": [
+        {
+          "id": "context",
+          "title": "Identity & context",
+          "description": "Explore gender identity, historical context, legal landmarks, and the Hijra community.",
+          "bounds": [
+            0,
+            0,
+            0.282,
+            0.29716
+          ]
+        },
+        {
+          "id": "journeys",
+          "title": "Life journeys",
+          "description": "Follow life events, emotional patterns, and key turning points.",
+          "bounds": [
+            0.283,
+            0,
+            0.28,
+            0.29716
+          ]
+        },
+        {
+          "id": "influences",
+          "title": "Influence map",
+          "description": "Trace the relationships affecting the lives of trans people.",
+          "bounds": [
+            0.564,
+            0,
+            0.25,
+            0.29716
+          ]
+        },
+        {
+          "id": "change",
+          "title": "Stakeholders & change",
+          "description": "Explore causal loops, key actors, and opportunities for change.",
+          "bounds": [
+            0.815,
+            0,
+            0.185,
+            0.29716
+          ]
+        }
+      ],
+      "institution": "National Institute of Design",
+      "contributors": [
+        "Adweta Kesh",
+        "Animesh Jain",
+        "Karthikeya GS",
+        "Mrunal Deshmukh",
+        "Tanvi Palkar"
+      ],
+      "guides": [
+        "Balaji Rangarajan",
+        "Chakradhar Saswade",
+        "Noopur Varma",
+        "Sridhar Dulipala",
+        "Tulip Sinha"
+      ],
+      "imageAlt": "Wide gigamap on trans lives in India, with historical context, illustrated life journeys, a connected influence map, causal loops, and opportunities for change.",
+      "width": 18000,
+      "height": 5349,
+      "downloadBytes": 38720314,
+      "ocrText": "Need for\nexternal\nTranscending\nSelf\nvalidation\nLife journey\nLower Class\nAn overview\njourneys\n• Low Impact\nInfluence\nAcceptance\nHigh Impact\n(Initial State)\nMisdiagnosis\nAraavani\nPhysiological\nEunuch\nHijra\nKhwaja Sara\nKinnar\nwith\nHow to address\nSafety\nUrban\nRural\nTamil\nUrdu\nHindustani\nLower\nDysphoria\nGreek\nComing out/Got outed\nof the system\nMiddle Class\nIndividual\nUpper Class\nmap\na trans person?\nWidows of\nCastrated Male.\nUsed only by the people inside\nRevered term\nReferences to the kinds\nJoy\nOuted: Making someone's identity\nAfter studying the life of various Trans pers\nhe life of various Trans persons from different socio-\nSexual\nPersona\nPivoting\npublic without their consent.\nAravan(Son of Arjuna)\ncommunity. Can be percieved as\nused throughout\nof devas of music and\neconomic backgrounds, it shows patterns in\ngrounds, it shows patterns in the life events, pivot\nConfusion\nViolence\nGraph\nImproved Deteriorated\nPoint\nfrom Mahabharata.\nderogatory if used otherwise.\nhistory.\ndance in the puranas\npoints and their impact. The Emotion Graph\nimpact. The Emotion Graph plots the state of mind\nFear\nFeeling of\nThis section gives a glossary of\nGAS: Gender\nThe loops showcased are the emerging\nUpper\nterms to address the community in a\nthe person was in against years on a horizo\nin against years on a horizontal axis.\nStayed Constant\nStress\nAffirmation Surgery\nSocial\nOutcome of research\ndignified manner as a few of terms\npatterns that the system depicts. These\nDualities\n(Current State)\nInstitutes Involved\nEvidences &\nInformal\nAccessible\nIsolation\nand development loop\nMis-Information\nare considered derogatory.\nloops either reinforce the repetitive\nJogtins & Jogappas\nShiv Shakti\nThirunangai\nTritiya-prakriti\nNapunsaka\nin Research\nResults\nMedical\nHealthcare\nMental\nForced\nbehaviours or balance/nullify the effects\nResearch and development for the\nof\nMarathi\nUsed in Andra Pradesh\nMentioned in Vedas\nMentioned in Kamasutra Scripts\nInstitutions\nTransitions\nHealth Issues\ninstitutes creates more evidences\nUnprotected\nin the system.\nfeeding in back in increase in research.\nSex\nGender\nInclusive Policies\nData &\nGendered\nKnowledge\nCame\nAbuse &\nSusceptibility\nResearch &\ndocumentation\nStereotype\nInitial\nDropped\nRan\nFamily\nMistreatment\nGap\nOut\nConversion\nAttempted\nJoined an\nto STIs\nRealisation\nAbuse\nTherapy\nAway\nSex Work\nSuicide\nNGO\nDevelopment\nby HCPS\nSuicidal\nIllegal\nTendency\nOccupation\n10Y\n16Y\nSupport in\nHow is trans\nSocial Circles\nMapping influences in the life of a\nConsequences of\nTrans Presence\nProductivity\nDiscrimination\nportrayal in mythology?\nAwareness of\nForced Occupation loop\nin Social Circle\nat\nAnger\nGender Identity\nAccess to\nWorkplace\ntowards\nRisk of\nCrime\nSociety\nTrans person in India\nPoverty\nHeteronormative\nRate\nArdhanarishvara\nCame out\nShikhandi\nWorks at\nThreats\nBrihannala\nActual\nto family\nMoved out\nGAS\nIntra-\nPresumptions\nChild\nEducation\nAwareness of Gender\nSupported for education\nan MNC\nunder\nTrafficking\nSupport\nIncome\nAllies of\nHindu Mythology\nMahabharata\nLevel\nIdentity loop\nReligious\nGroups\ncommunicat\nPolice\nTrans People\n22Y\n24Y\n30Y\n32Y\nof the family\nValues\nArdhanarishvara is a\nShikhandi was born female but\nBrihannala, was the Napusak form\nion\nExtortion\nAwareness increase results in\nResorting to\nHealth\nraised male. They are celebrated\ndecreased gendered stereotypes\nrepresentation of the unity of\nof Arjuna, during the year of\nSubstance\nInclusive\n• Representation\nresulting in increased visibility in\nAccessible GAS\nmasculine (Shiva) and feminine\nas a symbol of transgender\n'Agyaatvas' of Pandavas. She\nLevel of\nPolicies\nsociety.\nPolice &\nin Society\nTreatment\nidentity, challenging traditional\nOverview\n(Parvati) energies,\ntaught dance & music to Uttara,\nWhy me?\nHarassment\nPresence in\nDecreased knowledge gap leads\nacknowledging both aspects of\ngender roles.\nthe daughter of King Virat. She was\nBrutality\nIncidences\nto an increase in gender-inclusive\nPhysically\nDegree of\nEffect of Education\nSchool\nthe self and promoting gender\nalso the charioteer of Uttaran\nAbused &\nCame Out\nAge of self\nAccepted\nJoined as\npolicies.\ncloseness with\nto healthcare loop\nR\nSignificance of\nHarassed\nby Family\nBullying, verbal and physical abuse can have a\nDropout\nKumara & fought the battle against\nCurrently in Upper Middle Class Status\nacceptance\nBeing\nEmployment\nas people do not disclose themselves due\nparents\nEmpowerment\n94%\nof them are rejected\nKauravas.\ndevastating impact on a person's sense of self,\nFamily's\nThe level of education can lead to\nmost marginalised. Once a revered community, their\nOuted\n4.8L\n28Y\nProgrammes\nprogrammes loop\n0.34%\nemployment opportunities.\nand add to feelings of insecurity, self-doubt,\nincrease in income which can directly\nVisibility\nDrop out\ncurrent status stays as second-class citizens in post-colonial\nof Indian Population\nresults in access to healthcare\nand a desire to conform to societal norms in\nIndia.\nfrom schools\norder to avoid further mistreatment.\ntrans people were\nFreedom to\nreported to live in Indi\nTheir lives are influenced by various factors including social,\n99%\nStereotypes\nof them earn less than\nexpress\nSocietal\nComplacency\nIncidents\ncultural, and legal norms that contribute to discrimination,\n₴25,000.\nThe pre-colonial world had a dignified position for them in\nRan away\nidentity.\nAdopted a\nNormalisation\nGot Outed\nfrom Joined an\nFounded\nto Abusive\nprejudice, and exclusion.\nsociety. Once revered, the Trans community in today's society\nOut ot\nStatus of\nFamilia\nSource: 2011 censes of India\nrealisation\nan NGO\nof Abusive\nschool\nhouse\nsponsibilitie\nEnvironments\nRespon\nlities\nRisk of Poverty\nwent through discrimination and Prejudice.\nBehaviours\nLegend\nResult of data and\nated Numbers in 2022 are 50-60 Lakhs\nOur study aims to sensitise the viewer with a deeper\n34Y\nRamifications of School to\n29 T\nZO T\nDOT\nInfrastructure\ndocumentation loop\nEstimated Numbers in 2022 are 50-6\n15%\nof them have a\nStudent relationship loop\nDirectly Proportional\nunderstanding of their life and challenges faced by the\nFreedom of\ndiscrimination\nRunning\nvoters ID.\nData & documentation in the means of\ncommunity and highlight possibilities of systemic\nChoice\n+ ve causal link\nResearch\nresearch can help create inclusive policies.\ninterventions for change.\nCrimes\nIndirectly Proportional\nBalancing\nReinforcement\nWhy can't I?\nLoop\n-ve causal link\nDocumentation\nBegging &\n| Initial\nout\nWorks as\n& data\nWhen did it all\nOndede\nan Activist\nTranspeople\ncollection\nTRaNS\nNon-Discriminated\nInternal conflicts between their authentic\nin Positions\nBILL\nCases of\nself and societal norms & expectations\n20Y\nof Power\nWho is a\nchange?\nDiscriminated\nMisinformation\ncan lead to feelings of confusion, self-\nFactors\nAffordability of\ndoubt, or even dysphoria.\ntrans person?\nBody\nBuilding\nCommitted\nCommunity\nSelf Acceptance\nInfluencer\nMarriage\ninfluencing\nNaLiSa\n2020\nEvents\nNational Council\nPeer\nMedia\nwas created to help the Government\nof India to work on their inclusion &\nInfuence\nRepresentation\nLaws &\n1500 BC - 500 BC\nStigma\nempowerment.\nIndirect\naround TGs\nMention in Vedas\nInfluencers\nlife of a\n2019\nas pums-prakriti or male, stri-\nWelfare\nHigh Influence &\nprakriti or female, & tritiya-prakriti\nTrans Bill\nvedas\nGender Expression\nor napunsaka or the third sex.\nDropfout\nJoined\nHigh Interest\n2•1\n& Schemes\nLow Interest\nDesigners\nfrom\nSex work\nGang\nDecided to\nBecame\nGauRi sawanT\nThe Transgender Persons (Protection\nAwareness\nStringency\nSchool Acceptance\nhome\n& Begging community\nRaped leave sex work first TG RJ\nof Rights) Bill was passed to protect\nfrom Allies\nof Rules\nGender includes the social,\nGender expression is the way a\nabout\nthe rights of trans-people.\nCurrently in Middle Class Status\nWho are the\nEntities\npsychological, cultural and behavioural\nperson chooses to showcase\nArchiving\nSeverity of\nClassmates\ntrans person\nBelief in Legal &\naspects of being of a gender.\nthemselves through appearances.\n& colleagues\n2014\nIdentity\nBudget\n300 BC\nAdministrative\nkey actors in the system?\nAllocated\nSystems\nEducational\nNALSA\nTamil Grammer\nLaws\nPolitical\nInstitutions & HCPs\njudgment recognises transpeople\nthe Tolkappiyam also refers to\nLegal\nas a 'third gender' on all official\nhermaphrodites as \"neuter\" gender.\nCome out\ndocuments.\nActivists\nto cousin\nStudying\nLaw\nCrime Rate\nOur study uncovered the critical factor of influence, and the\nof Gender\nNormalizing\nCompanies\nRIGHT\nAccessible &\nThe diagram illustrates the positioning of different stakeholders\n2008\naccompanying diagram highlights the factors that have a\nIdentities\nNon-hetro\nPartners/\nSafe basic\nbased on their power to influence the life trajectories of the\nTO VOTE\nUN representation\nRelationships\nkey role in deciding life trajectories for trans individuals.\npublic\nSpouses\nParents\ntrans community.\n200 BC\namenities\nGovernment &\nLakshmi Narayan Tripathi became\nPeers &\nPolicy Makers\nThe framework synthesises the factors into sub-systems\nOfficials\n3 Natural Genders\nthe 1st trans-person to represented\nSocial Circle\nThe stakeholders located in the high-influence & high interest\nAsia Pacific in the UN.\nthat impact other sub-systems.\nFinancial\n• Sex\nquadrant are the primary focus for targeting in order to\n2.2\nare derived in Sanskrit's\nSiblings\nTransgender\ngrammatical genders\n& NGO\nachieve the greatest impact on the system\nIndividuals\n2001\nwork\nGender identity is the personal sense of\nSex refers to the biological and\n1st Adoption\nDelhi\nCurrently in Lower Class Status\nphysiological characteristics that define\none's own gender. Gender identity can\nUnions &\nCurriculum\n18Y\n26Y\nRelatives\nDirectors\nFirst trans activist Gauri Sawant\nSupport Groups\nhumans as female, male or intersex.\ndiffer from person's assigned sex.\n/Family\n200 AD\nlegally adopted a girl.\nall India conference\nManu Smriti\nVisibility in\n1998\nsociety\nexplains the biological origins of\nMP State Assembly\nthird sexes as - 'Prevalence of both\nInterest\nfemale & male seed equally, a third-\nDropped Outed\nwas joined by Shabnam Mausi as the\nSexuality\nsex child is borni\nBullied\naway\nHijra community\n1st Trans Person in State assembly\n1994\nOY\n12Y\n36Y\nSexual orientation is romantic or sexual attraction to\n12th Century\nRight to Vote\npersons of the other or same sex.\nHijras held revered\nAutonomy\nwhile allowing Trans persons\nWhere can one\nto choose their own gender.\npositions of military commanders,\n1981\npolitical advisors, and guardians of the\n1st All India\nAge of\nRecognition\n1860 - 2018\n15 years\nharem; during Delhi Sultanates era.\n7.5 years\nintroduction\nbring a change?\nHijra Conference\nWhen do align\nSection 377\n1952\nAverage age of realisation\nAverage age of coming out/\nto gender\nbeing outed from our research\nHijras de-notified\nin Agra. 50k people attended\nfrom our research\nstudies\nof the Indian Penal Code criminalised\nWhen don't align\nbeing a Transgender under British rule,\nas a criminal tribe declared in Criminal\nas it prohibited 'unnatural' intercourse.\nThe point where\nTribes Act of 1871, leading to their\nit all changed\nstigmatization and marginalization and\nDropping\ndenial of their basic rights in the\nPersonal\nLegally\nAbility to\ncolonial rule\nof School\nDocuments\nmarried\nseek Legal\nFamily Support\nVulnerable Period\nEmotional Trends\nCis Gender\nTrans Gender\nTrans people\nEligibility to\nAdoption\nIndividuals who had Family\nGender dysphoria gets stronger\nThere seems to be a trend\nProperty\ndentifying as transgender, that one's internal identity\nsupport had better emotional\nInheritance\nUnderstanding Gender & Sexuality\nBridging the knowledge gaps\nDescribes a person whose gender\nIdentifying as transgender, t\nduring the puberty phase, when\nof emotions regardless of\nAiding Parent & Child Relations\nCrucial landmarks\nidentity aligns with the sex assigned\nof gender is different from c\nf gender is different from conventional expectations\nhealth and quality of life.\nthey are either outed or come\nsocio-economic status.\nMost people confuse gender identity with sexual\nParents with children going through gender\nto them at birth.\nof the sex that a person was assigned at birth.\nout to close ones.\nSame Sex\nThe lack of research on Transpeople has slowed\nConfusion • Fear • Stress\nin the journey of progress\nattraction towards others. Hence Trans people are\ndysphoria need support in order to come to terms\ndown a lot of innovation in the fields of medicine,\namong LGBT\nsuggested alternatives to being gay/lesbian by\nemployment and policies. There is an urgent need\nwith and educate themselves. Impulsive reactions\ncommunity\ntheir social circles. There is a need for sensitisation\nby parents and the child could be catastrophic.\nto create systems to collect data to bridge the\nWhat am I?\nand awareness\nThere is a need to facilitate these relationships.\nknowledge gaps.\nNALSA vs Union of India and the Transgender Persons\nRented\nGender Identity - A Deeper Understo\neeper Understanding\nSpaces\n(Protection of Rights) Act of 2019 are landmark developments\nMotivation\nKey Pivot\nin India's legal and social landscape with regards to\nDay-to-Day activity can be difficult in a world\nto change\nFrom the journeys that we mapped, a few patterns emerged. Below are 3 key pivot points that c\nare 3 key pivot points that decide the life trajectory of\nAspirational\ntransgender rights.\nPoints\nthat typically provides infrastructure &\nevery trans individual. Not every individual has a particular sequence of these pivotal points.\nLevels\nFor the purpose of our research, we are referring to trans binary individual w\nto trans binary individual who identify either as\namenities in binary genders.\na man or a woman. The terms 'Assigned Male at Birth' (AMAB) or 'Assigne\nat Birth' (AMAB) or 'Assigned Female at Birth'\nConfidence &\nPurchasing\nInvolvement\n(AFAB) are used to dismiss any assumptions on the gender id\nsumptions on the gender identity.\nGrowth of\nIs this it?\nEsteem level\nin Forced\nHomelessness\nNeed for Second Chances at Life\nSupport through Transition\nformal\nPower\nNeed for Platonic Safe Spaces\nInterpersonal\nSkills\nThe person going through medical & legal\n90% of Transgender children especially from tier-2\nFeelings of distress, isolation, and a desire to\nThere is a need to create spaces that facilitate\ntransitioning needs support in a variety of forms.\nCis-Man\nJoining the\nand tier-3 cities drop out of schools in their teenage\nNALSA vs\nThe Transgender Persons\n(Trans - Non Binary)\nPrevalent Social Institution\nescape from a hostile environment can\nCompetency\nconnections between cisgender and transgender\nIt involves a variety of stakeholders like doctors,\n(Binary)\nPresence\nyears due to harassment, hampering their\ncontribute to stress and psychological health\nindividuals, in addition to existing LGBTQ safe spaces,\nIdentifies\n(Protection of Rights) Bill\nemployment eligibility. There is a need to resume\nlawyers, police officers, etc along with a tedious\nUnion Of India\nHorizontal\ndeterioration in Trans individuals.\nas these communities provide valuable opportunities\nnon-binary\nprocess. Co-operation from these professionals\nReservation\ntheir education without forcing them to settle for\nfor exploration, self-expression, and understanding.\nHijra Community\ncan support through the process for the\nIdentifies as\nTrans-Man\nexploitative jobs.\nindividual.\n(Trans-Binary)\na Man\nMaha nayak / Supreme Chief\nAgender\nResponsibility for maintaining social order\nStructure\nThe NALSA (National Legal Services\nThe Transgender Persons (Protection of\namong hijras through governing council.\nIdentifies with no\nRights) Bill, 2019, defines transgender persons\nAssigned Male\nAuthority), 2014, approved the right of the\nat Birth (AMAB)\ntransgender community to gender\nas those whose gender does not match the\nInclusion at\nidentification outside of the gender binary and\ngender assigned to them at birth and provides\nHijra Community is one of the oldest\nworkplaces\nNeed for Inclusive language\nNeed for Gender diverse\nOpportunities for Empowerment\nBigender\nNayak / Supreme Chief\nintroduced legal protections for them.\nthem with legal recognition and protection\ninstitutions and provide safety and shelter\n| Transitioning\nBoth/None\nagainst discrimination.\nGender Dysphoria\nComing Out\nto trans persons who are rejected by\nAct as mediators in disputes. relatively\nIdentifies with both\nIt declared, &values of privacy, self-identity,\nsociety. Their daily earnings are through\nfinancially better off.\nAccessibility\nInclusive language is crucial in acknowledging and\nThe hijra community has a strong hierarchy that\nBy providing gender-neutral or gender-inclusive\nthe binary genders\nautonomy and personal integrity as\nIt aims to provide transgender individuals with:\nto Banking\nforces the individual to be stuck in the vicious cycle of\nbegging & sex work.\nA mismatch between their\nSelf-acceptance & sharing\nStepping into congruence\nTrans-Woman\nnormalizing individuals' existence and identities,\nfacilities, organizations and public spaces can\nInfluences the\nServices\nImproved\nfundamental rights guaranteed to members\nOccupational\nundignified jobs. There is a need to create\nAssigned Female\nwith one's identity.\nserving as an initial step towards acceptance and\nbiological sex and their\nyour identity openly with\ncritical factor\ncreate a more welcoming environment where\nof the transgender community under Article\n• Education & employment opportunities\nat Birth (AFAB)\nTo identify as Hijra, a person must be\nSegregation\nopportunities to help break this cycle for individuals.\nGender Fluid\ngender identity.\nfostering lasting societal change for future\neveryone feels respected, valued, and comfortable\nother people.\n19(1)(a) of the Constitution of India and the\ninitiated through a ritual adoption by a\nEligibility for\nInterest of\n• Outlines provisions for their welfare &\ngenerations.\nthat can promote equality and social acceptance.\nGuru\nState is bound to protect and recognise those\nHijra guru into the Hijra community.\nLoans\nCis-Woman\nIdentifies with\nrehabilitation\nInstitutes\nrights\"\nGain status from number of Chelas.\na Woman\nmultiple genders\nGurus\nIndividuals with gender dysphoria have:\nAn individual comes out:\nThree types of transitions:\nInfluences &\nThe diagram beside shows the\nThey delegate work based on gender\nCritical\nSecurity\nthat change with time\n• Access to healthcare\n& caste, & receive payments.\nInfluenced\nhierarchy of the structure and power\nFactor\n• Social Transitioning\nto Insurance\n• A strong preference to wear clothes of\n• By telling friends, family members, co-\nIndependent\ndynamics which keeps them stuck in\nInvestments\na different gender.\nworkers, and people they trust about\nThe person may change their pronouns,\nSpecific\nGround Reality\nthe vicious cycle of undignified works.\ntheir gender identity.\ndressing style & mannerisms to align with\nDemands\nFact Check\nInfluenced by\nResearch and\nChela / Disciple\n• A strong dislike for one's sexual\ntheir identity.\nNot all trans person belong to\nDue to failure of implementation at multiple\nthe critical\nTeam Members\nGuided By\nThe 2019 Transgender Persons Act allows district\n• The person might choose to make\nthe Hijra community.\nanatomy.\nprivate sector\nChelas\nFollow rules like speaking in a lower pitch\nfactor\nSpecial Mention : Tanishq Verma\nThe concepts of sex, gender identity, and\nlevels; the community still faces:\nmagistrates to recognize a person as trans, but it\n• Medical Transitioning\nAdweta Kesh, Animesh Jain, Karthikeya GS, Mrunal Deshmukh, Tanvi Palkar\nBalaji Rangarajan, Chakradho\nalaji Rangarajan, Chakradhar Saswade, Noopur Varma, Sridhar Dulipala, Tulip Sinha\nchanges to their appearance, name,\nNATIONAL INSTITUTE OF DESIGN\n& not interrupting their gurus. They inherit\nThese sub-sytems impact\nconflicts with the NALSA judgment which allows\nproperty from their gurus.\n• A strong desire to play another\nThe person may or may not go through\nsexuality are distinct but can be explored in\nand pronouns.\n• Discrimination\nself-identification of gender and prohibits the\nacross various domains.\ngender in fantasy play, or to have\ngender affirmation surgery & hormone\nrelation to one another.\n-----------•\n• Marginalization\nrequirement of gender affirmation surgery.\ntoys or games that have stereotypical\n• The person might choose to be vocal\ntherapy.\nNati - Chela\nAdditionally, the Act fails to provide reservations\nassociations with another gender or a\nabout themselves and become part of\nNati Chela / Disciple's Disciple\n• Insufficient social and economic support\nin educational institutions and public\nstrong rejection of typical activities\nsupport groups.\n• Legal Transitioning\nGratitude\nThis gigamap was made possible through invaluable collaborative support from organisat\ntive support from organisations such as QAMRA Archives,\nScan the QR code\nOften indulge in forced occupation like\nappointments for the transgender community.\nassociated with the sex assigned at\nThe person opts to change their legal\n• Limited access to legal recognition of\nRamaiah Medical College professionals, members of the Aravani Art Project, member of\nDuration:\n(March - May, 2023)\nbegging in public spaces and sex work.\nSpecific Needs\nvani Art Project, member of the Intersex Human Rights India and\n8 Weeks\nto see the entire\nNotes:\ny misunderstood as synonyms\nbirth.\nAn individual can also be outed:\nidentity to the new identity chosen by\nIntersex v/s Transgender are commonly misunderstood as\nseveral other people from the community who shared their experiences & life stories gen\nxperiences & life stories generously with us.\nNote\n• When one's personal identity is\nthem.\n→ Indirectly Proportional\nIntersex are people born with ambiguous genitalia and may or may not identify as\nmay or may not identify as a Trans person.\nrevealed without their consent."
+    },
+    {
+      "id": "house-of-vulnerability",
+      "title": "House of Vulnerability",
+      "batch": 2024,
+      "summary": "Exploring vulnerability and resilience across India’s socioeconomic landscape.",
+      "description": "Using a house of cards metaphor, the map explores how economic, social, environmental, political, technological, physical and educational factors shape vulnerability across income groups in India. It brings together historical context and a framework for assessing the effects of policies and interventions at individual, community and collective levels.",
+      "domains": [
+        "Social systems"
+      ],
+      "topics": [
+        "Socioeconomic vulnerability",
+        "Resilience",
+        "Income inequality",
+        "Public policy",
+        "India"
+      ],
+      "tags": [
+        "Socioeconomic vulnerability",
+        "Resilience",
+        "India"
+      ],
+      "methods": [
+        "Research",
+        "Historical analysis",
+        "Vulnerability assessment",
+        "Framework development"
+      ],
+      "institution": "National Institute of Design",
+      "duration": "8 weeks",
+      "contributors": [
+        "Anshika Sharma",
+        "Arif Ali Mahuwala",
+        "Chinmay Karan",
+        "Dharshini Vaishnav",
+        "Samruddhi Bulbule",
+        "Surbhi Yadav",
+        "Ankit Anand"
+      ],
+      "guides": [
+        "Balaji Rengarajan",
+        "Chakradhar Saswade",
+        "Sridhar Dhulipala",
+        "Tulip Sinha",
+        "Noopur Verma"
+      ],
+      "imageAlt": "Wide charcoal gigamap with a colourful house of cards illustrating vulnerability and resilience across income groups, contextual charts and a historical timeline on the left, and a layered policy assessment framework and research insights on the right.",
+      "regions": [
+        {
+          "id": "context",
+          "title": "Vulnerability & context",
+          "description": "Explore the dimensions of vulnerability in India and the historical timeline.",
+          "bounds": [
+            0,
+            0,
+            0.245,
+            0.3333333333333333
+          ]
+        },
+        {
+          "id": "house-of-cards",
+          "title": "The house of cards",
+          "description": "Compare vulnerability and resilience across income groups through the central card structures.",
+          "bounds": [
+            0.247,
+            0,
+            0.499,
+            0.3333333333333333
+          ]
+        },
+        {
+          "id": "framework",
+          "title": "Assessment framework",
+          "description": "Explore the framework for assessing policies and interventions at individual, community and collective levels.",
+          "bounds": [
+            0.672,
+            0,
+            0.323,
+            0.216
+          ]
+        },
+        {
+          "id": "insights",
+          "title": "Insights & conclusion",
+          "description": "Read the research insights on resilience, context, governance and interconnected vulnerabilities.",
+          "bounds": [
+            0.749,
+            0.22,
+            0.246,
+            0.073
+          ]
+        }
+      ],
+      "width": 18000,
+      "height": 6000,
+      "downloadBytes": 45480625,
+      "overview": "/assets/house-of-vulnerability/overview.webp",
+      "tileSource": "/assets/house-of-vulnerability/map.dzi",
+      "download": "/downloads/house-of-vulnerability.pdf",
+      "ocrText": "Collective\nmoronstal any isational bature\nulti-dimensional vulnerability\n| How to use this framework?\n| What makes India Vulnerable?\nThe level framework of\nHouse of Vulnerability\n(Infrastructure and Institutions)\nPoints to keep in mind while using the framework:\nVulnerability as a multiple structure:\nVulnerability\nCommunity\n1. Define the System:\n(Socio-Economic Demographic)\ndening of\nBordered by the fragile young Himalayas and a long coastline, India's vast and varied geography is\nContext Specificity: Don't apply a one-size-fits-all approach. Adapt the\nVulnerability as an interna\nIdentify the specific social-economical system you're analysing. This could be a local\nparticularly vulnerable to climate change. More than 80 percent of India's people live in districts\nIndividual\nframework to the specific social, economic, and environmental context\n| What is The level framework of Vulnerability?\ncommunity, an agricultural region affected by a new irrigation policy, or even a national\n(Entitlement)\nlikelihood to\nthat are at risk of climate induced disasters.\nof your chosen system.\npopulation facing a healthcare reform.\nRESPONSE\nScalability: The framework can be applied at different scales, from\nThe framework has been designed to assess the effectiveness of\nIdentitying and addressing Vulnerabilities within\nanalysing a local community to assessing the impact of a national\nVulnerab\nsolutions or policies. This framework expands on existing\nConsider the boundaries: Define the geographical area and the types of individuals or\nIndia's Socioeconomic Landscape\ncoping capa\npolicy on an entire region.\n8 highly vulnerable states\nvulnerability assessments to evaluate both potential drawbacks and\ngroups included in your system.\nSENSITIVITY\nInterdisciplinary Collaboration: Involve expertise from various\n(Vulnerability Index 2020) :\nbenefits of proposed solutions or policies at three levels: intrinsic,\nIndia is ranked 7th in the\nCost of Climate Change on GDP :\ncommunity, and collective. It allows for a comprehensive analysis\ndisciplines like social sciences, economics, ecology, engineering, and\n2. Gather Data:\nGlobal Climate Risk\npolicy to gain a comprehensive understanding of vulnerability.\nIndex 2021\nBirkmann's representation of the scale &\nwhile remaining easy to use.\n| What is Vulnerability?\nRESILIENGE\nFocus on the seven key components:\nAdgar's framework for Vulnerability 1996\ncomplexity of vulnerability concepts (2013)\n-Toressional security\nplement strong internal\nShift investment to\nSocio-cultural: Collect data on demographics, income levels, education, social safety\nbanking and tax\npersonal development\nInvest in local\nAvoid quick influences\noptimization strategies\ncontrols\ndevelopment projects\nwhich are in favor of\nThe framework isn't designed to explain why vulnerabilities arise,\nEstablishment of strong\nEntrepreneurship\nnets, and cultural norms.\nDiversification of\nInvesting in Sustainable\npolitical connections\nApproaches\nVulnerability relates to the susceptibility of assets such as objects, systems (or\ninvestment portfolios\nInfrastructure Solutions\nImplement strong internal\nPractice gratitude\nnelp\nDiversify investments\nShifting towards mindful\nVulnerability is a multidisciplinary\nAccess to financial\nPrioritizing Health and\nInvestment in political\nwestment in retirement\nConsider remote work\nbut rather to categorise the different elements and connections\nadvisors and wealth\nthink tanks and advocacy\nwork and personal life\nplanning and pension\nResponsible Upgrading\nEconomic: Analyse economic structure, employment opportunities, access to\npart thereof) and populations exposed to disturbances, stressors or shocks as\nsubject & is constituted by :\nliving practices\nFocus on fostering\nSustainable Consumption\nthat make a system susceptible to the negative impacts of a\nDirect losses from natural\nIMPACT\nresources, and dependence on specific sectors.\nwell as to the lack of capacity to cope with and to adept to these adverse\nReduce Energy\nRESILIENCE\nMilestones for personal\nTravel and volunteer\ndisasters have been estimated to\nVulnerable to poli\nMaintain Human\nsolution or policy. It draws inspiration from vulnerability concepts\ndevelopment\nAccess to quality\nmaintenance\nInvesting in human skills\nPolitical: Investigate governance, policy frameworks, and the capacity of institutions to\nconditions.\nSociology\namount up to 2% of India's GDP\nsecurity protocols\nextracurricular activities\nresources and\nthat cannot be easily\nOversight\nSource: Reserve Bank Of India\nIndia (% Of GDP)\nExposure to hig!\nDiversify and remove\nexplored by prominent researchers like Billie L. Turner II (2003),\nSeek Support\nautomated\nmanage change.\nPublic Health\nchoices\nImpact of ecor\nand remov\nDependency\nBirkmann (2013), Adger et al. (2002), Burton et al. (2002), Downing\nsanctions on bu\nTechnology: Assess existing infrastructure, access to technology, and communication\nGeography\nVulnerability is the birthplace of innovation and change, but also the\nInfluence of\net al. (2001), and Allen (2003).\nDisaster Studies\nnetworks.\nbreeding ground of fear and uncertainty.\"\nman a ron on\nENVIRONME\nEnvironmental: Analyse the natural resources, biodiversity, and environmental risks\nENVIRONMENTAL\nVulnerability towards various hazards:\nRecognising the abstract nature of vulnerability, this framework\nwithin the system.\nTEGHNOLOGY\n[ SOCIO-\nwas designed to extract deeper insights by considering both a\nPhysical: Identify potential threats like natural disasters, pollution, or economic shocks.\nCyclones\nEarthquake\n30%\nForest Fires\nDrought\nLandslides &\nFlooas\n10%\nAvalanches\nsystem's susceptibility and its capacity to bounce back, leading to\nINTERNAL\n59%\nof the world's\n35.47%\n68%\n12%\nEconomical: Identifying factors affecting learning outcomes, limiting their educational\nlanas des\nINFLUENCE\nof geographical\noccur in the\nof total\nof agicultural\nor g araphical\nor goographical\nmore accurate evaluations. \"\ncoastline\nnolan\narea\nHimalayas\nforest area\nopportunities, or preventing them from achieving their full potential.\nCanon's Breakdown of Vulnerability (2008):\nLivelihood\nstrength and\nresilience\nUtilise various methods: Use surveys, interviews, government data, scientific reports,\nThe breakdown provides a comprehensive view of vulnerability and resilience,\nand existing vulnerability assessments.\nincluding livelihood strength, self-protection, social protection, governance, and\nRich & Super Rich\nHIGHLY STABLE\nPOLITICAL\nSelf\nSocial\nHigh Income Group\nbaseline well being.\nProtection\nSOCIO-ECONOMIC\nPublic distribution\nsystems and mid-day\nFamily and few Legal aid\n3. Analyse Interactions:\nCOLLECTIVE\nSTRUCTURE\nHigh income earners face pressure to uphold their\nGrowing demand for\nRight to Information (RTI)\nRich & super rich individuals face risks like policy\n& super rich individuals face risks like policy shifts,\nAct & other policies\nEnvironmental regulation\nIdentify how the components influence each other: Look for connections between\nAssert individuality\nNGOs advocating for\nLivelihood strength assesses capacity to withstand shocks, self-protection\n| Number of Cyber Attacks in India:\ncrime, and risky investments. They counter these\nlifestyles Their risk of health issues linked to\nand awareness programs\nDisaster preparedness\nfactors. For example, high poverty (social factor) might increase sensitivity to\nDefine personal values\noverindulgence and a fast-paced life. They have\njob prospects\nfocuses on actions to mitigate risks, social protection examines support\noffshore banking, security consultants, and inves\nnore banking, security consultants, and investment\nIMPAGT\nsov \"Har ghar jal scheme\"\ndiscrimination, physical and environmental vulnerabilities.\ndiversification. Some also prioritise philanthropy.\npower to hire the professionals to help them.\nAffordable/Free\nGovernment investment\npublic schools\nin digital infrastructure\nsystems, governance evaluates decision-making, and well-being considers\nGovernance\nWellbeing &\nCybersecurity awareness\nbaseline status\nAnalyse potential feedback loops: Consider how the implemented solution/policy might\nPrivacy settings control\nSOGIO-GULTURAL\nelder person in the vicir\nsocio-economic conditions.\ner person in the vici\nFact-checking efforts\ncampaigns\nPHYSIGAL\ninteract with existing vulnerabilities, potentially leading to cascading effects.\nEGONOMICAL\nIndia's rapid technological advancement widens the\nvulnerability to cyber threats, targeting government,\nvia social media\n4. Identify Stakeholders:\nbusinesses, and individuals alike. The persisting digital\n| The key components of this framework\nSTABLE\nInvolve stakeholders throughout the process: This could include community leaders,\n| What makes us Vulnerable?\ndivide leaves marginalised groups without access to\npolicymakers, experts, and potentially individuals directly affected by the proposed\ntechnology, exacerbating socio-economic disparities and\nsolution/policy.\nincreasing susceptibility to cyberattacks.\nUnderstanding vulnerability is crucial in navigating the complexities of human experience. It encompasses a multitude of factors that\nEXPOSURE\nrender individuals or communities susceptible to adversity, exploitation, or harm. Examining vulnerability up close provided us with\nCOMMUNITY\nEGHNOLOGY\nThe degree to which an individual (intrinsic\ninvaluable insights into the intricate web of challenges faced by individuals in their daily lives.\n5. Develop Strategies:\nlevel), community, and the country (collective\nUse the framework's insights to develop strategies for reducing vulnerability to increase\nlevel) is likely to experience negative\nPersonal aspiration to up-\nconsequences from the implementation of a\nresilience and transformation by enhancing adaptive capacity. This could involve skills\n\"My parents had to\n4,400 Cyber Attacks on\n13.2 L cyber attacks\nPARTIALLY STABLE\nproposed solution or policy.\n‚¿My farm yields are\ntook place during\nAnti-corruption activism\nMiddle Income Group\ntraining, livelihood diversification programs, or fostering innovation.\nIndian Banks Every Day\nJanuary-October 2023\nEconomic Weaker Section\nchemes, poverty remov\nmortgage our land to\nCONTEXT\ndecreasing due to\npay for my sister's\nunpredictable weather\nMiddle class struggles with social pressures impacting\nThe Economic weaker section (EWS) section faces\nThe surrounding conditions, circumstances,\ndowry.\"\nEDUGATIONAL\nFamily/community\nUse of public ed-tech\nhealth, media misinformation. Debt management adds a\nissues like housing inadequacy and limited education,\nCommunity/Gov-led\nand characteristics that influence how a\npatterns.\"\nConscious use of micro\nEGONOMIGAL\nNGOS, and community\nresources\nsupport\nloan apps\nbig burden to the individuals for family well-being. They\nbut shows resilience through government housing\nproposed solution or policy might affect\nAge 16\nTier 2\nneed to maintain financial and metal health to sustain.\nSOGIO-CULTURAL\nindividual, community, and country as a whole.\nAge 53\nTier 3\nLow Income Group\nVirus code\nschemes and community-driven education projects.\n1.4 Lakh\n(11%)\nWebsite intrusion\nAn individual, community, or country's inherent\n'We're forced to\nMalware Propagation\ncharacteristics, resources, or circumstances\n®Thinking about future\nmigrate to cities in\n967 (0.1%)\nthat make them more likely to experience\nVulnerable\nWEAKER\nmakes me scared, What\nsearch of livelihoodii\nnegative consequences from a proposed\nservices\nsolution or policy.\nwill happen to my career.\nAge 26\n7.2 Lakh\nTier 1\nAge 29\n(54.4%)\nCOPING\nADJUSTMENT\nWEAK\nINTRINSIG\nUnauthorised\nAn individual, community, or country's\nnetwork\n\"My daughter was\ncapacity to absorb, adapt, and recover from\nscanning\nPHYSICAL\nOLITIGAL\n¿I compare my\nBelow Poverty Line\nforced to leave school\nEGONOMIEAL\nthe potential negative impacts of a proposed\nSITUATI\nSOGIO-GULTU\nlifestyle with others\n4.4 Lakh\nPhishing\ndue to the lack of\non social media.\"\n(33.3%)\nThe Below Poverty Line (BPL) section faces challenges\nclasses beyond 8th\n711 (0.1%)\nLimited parental educational support, social pressures,\nand economic hardship can make low income\nTIONAL\nSITUATION\nlike discrimination and limited access to basic needs,\nAge 21\ngrade.\nOthers\nbut resilience measures such as government schemes\nADAPTING\nindividuals more vulnerable. They have to counter this\n15,499 (1.2%)\nwith effective budgeting and conscious spending.\nand community initiatives help mitigate these.\nAge 48\nEXTERNAL INFLUENCE\nThe proposed solution or policy itself. The\nWhen I suffered a fracture, my\nPOLITIGAL\nframework considers this solution/policy as an\nexternal factor that can introduce new\ninability to work led to a\nEGONOMICA\nSEGIO-CULTURAL\nvulnerabilities or potentially strengthen resilience\ndecline in my mental stability.\"\nUNSTABLE\nat individual, community, and societal levels\nTRANSFORMING\nTRANSFORMATION\nPHYSICA\nAge 38\nINTERNAL INFLUENCE\n| Events :\nPOLITGAL\nThey're dynamic factors that can be amplified or\nmitigated by how communities and societies\nrespond (adapt, resist, etc.) to a solution/policy.\n5 out of 20 Indians are highly\nVULNERABILITY\nThis creates a feedback loop.\nINCREASED SUSCEPTIBILITY\nvulnerable to all three extreme events\nEDUG ATIONAL\nRESILIENC\nSOCIO\nRESILENGE\nGIO-GULTURA\n-CULTU\nInsights\nConclusion\nDroughts\nFloods\nOur primary research indicates that\nVulnerability is shaped by structural\nThe multi-layered and\nTOMERABIN\npeople often consider socio-economic\nfactors such as poverty,\nmultidimensional aspects of\nresilience more prominently than\nmarginalisation, and unequal\nvulnerability, encompassing political &\nWhile vulnerability exists in everyone and every situation, it isn't a one-size-fits-all issue.\nother resilience.\ndistribution of resources.\neconomic dimensions.\nVULNERABILIY\nThis research highlights the importance of context which create a breeding ground for\nSO:\nVULNERAB\nvulnerability in situations.\nSocio-economic resilience at peak\nStructural Factors\nMulti-dimensional aspect\nHNOLOGY\n| The Timeline\nThe key to tackle vulnerability lies in empowering communities. By understanding their\nneeds and fostering resilience from the ground up, we can build a more sustainable future.\nIn framework, success is likelier when\nResilience to vulnerability involves\nThe context of a situation is crucial\nHuman activities undeniably play a role in increasing vulnerability, underlining the need for\nS\nfor determining the level of exposure\nGolden Age\nMughal Era\nPre-British Era\nPost Independence\nsolutions positively impact intrinsic\ndeveloping coping mechanisms,\nBritish Era\nsustainable practices across the board.\nECHNOLOGY\nTEGHNBLOCT\nlevels, with communities playing a\nadapting to change, and having a positive\nand susceptibility.\npivotal role in defining outcomes.\noutlook despite facing vulnerabilities.\nThis research builds on existing models by scholars like Billie L. Turner II (2003), Birkmann\nBOGIO-CULTURA\nFramework for successful solutions\nResilience is a counter to vulnerability\nRole of context\n(2013), Adger et al. (2002), Burton et al. (2002), Downing et al. (2001), and Allen (2003),\ntaking a more comprehensive perspective. Our findings in India reveal seven major\nWhat do the numbers r\nhat do the numbers mean in the\nvulnerabilities environmental, socio-cultural, economic, physical, educational, political,\n\"House of Cards\"?\ntechnological with economic and social resilience consistently ranking as the most critical\nGovernment policies impact how well\nWe're all vulnerable, but feeling\nOne type of vulnerability never exists\nfactor across different historical periods.\ncommunities handle challenges. They\n\"invulnerable\" means the threats\nin isolation; they are interconnected\naffect resources & economic factors\nThe illustration depicts India's socio\ne illustration depicts India's socio-economic landscape using\nseem minimal on the scale\nwith each other.\nshaping a community's resilience.\nvulnerability, not non-existent.\nThe culmination of this research is a framework that goes beyond simply explaining\na house of cards metaphor. The nu\nouse of cards metaphor. The number on each card\nvulnerability and instead identifies the factors that assists to identify the most effective\nrepresents a distinct socio-econom\nresents a distinct socio-economic categories in India based\nRole of governance\nInvulnerability is a pseudo term\nInterconnectedness of vulnerabilities\npaths towards a more resilient future.\non annual income and social status\nannual income and social status.\n| Why the metaphor of \"House of Cards\"?\nA socioeconomic system's inherent vulnerabilities require\ncorresponding resilience factors to maintain stability.\nThe Vulnerability Cards\nThe Resilience Cards\nUnmitigated vulnerabilities can create a cascading effect,\n| Gratitude Note:\nDuring 500 AD, spanning ancient times\nDuring the early 16th to mid-18th\nworsening other the impact of other vulnerabilities.\n\"Deep gratitude to our esteemed faculties for their invaluable guid\nned faculties for their invaluable guidance in our systems design project. Their\nFrom the early 18th to mid-19th\nDuring the early 19th to mid-20th\nin post Independence India, the caste\n| Duration - 8 Weeks (Feb-April)\nto the medieval period India, Caste-\ncenturies, India faced socio-cultural\ncenturies, the burden of heavy taxation\ncenturies, British exploitation of the\nsystem, deeply rooted in society,\nexpertise illuminated the path, showing us how design can truly n\n, showing us how design can truly make a transformative impact.\"\nDive deeper!\nbased discrimination and fragmented\ntensions due to religious\nand exploitation by feudal lords\neconomy led to poverty, while colonial\nworsened discrimination and\nkingdoms were major concerns,\ndiscrimination, economic strain from\nworsened poverty and inequality,\nrule reinforced social hierarchies and\ninequality, limiting social mobility.\nEGONOMIOAL\nlimiting social mobility and stability.\nheavv taxation. limited education\neducation access was restricted,\nfostered discrimination. Loss of\nThese challenges, along with\nScan the QR code to explore the project's journey and\nAaBbCc\nAnnual Income\nOver-reliance on agrarian economy\naccess, and events like the imposition\nhindering societal progress, and\nsovereignty and divide-and-rule\neconomic and educational issues,\nbehind-the-scenes look at the project's development\nand lack of centralised defence\nof Islamic laws and the reintroduction\npolitical disunity fuelled conflicts and\npolicies fuelled political instability.\nshaped India's post-independence\n| Team Members\nSuper Rich\nGuided By\n| Special Mention\nmechanisms heightened vulnerability.\nof the jaziya tax.\nsusceptibility to external influences.\ngrowth journey.\nRich\n(Worth in Crores)\nAnshika Sharma, Arif Ali Mahuwala, Chinmay Karan, Dharshini\nBalaji Rengarajan, Chakradhar Saswade, Sridhar\nBamboo Workshop\n(Above Rs. 1 Crore)\nHIG\nEconomic strain\nVulnerabilitv\n(Rs. 18 lakhs - 1 Crore)\nMIG\nCaste discrimination\nReligious discrimination\nPolitical instability\nDynastic politics\nLIG\nVaishnav, Samruddhi Bulbule, Surbhi Yadav, Ankit Anand\nDhulipala, Tulip Sinha, Noopur Verma\nparticipants and volunteers\nNATIONAL INSTITUTE OF DESIGN\n(Rs 6 - 18 lakhs)\n(Rs 3 - 6 lakhs)\nEWS\nTEOHNOLOGY\nPHYSIOAL\n(Rs 3 lakhs - Rs.27000)\nBPL\nFragmented kingdoms\n_ack of unified governance\nEconomic exploitation\nCorruption\nCommunal tensions\nPOLITIOAL\nSOCIO-GULTURAL\n(Equal or below Rs.27000)\nVulnerability Card\nResilience Card\nStable structure"
+    }
+  ]
+}

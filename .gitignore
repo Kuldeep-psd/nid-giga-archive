@@ -1,0 +1,15 @@
+.DS_Store
+node_modules/
+.sites-runtime/
+build/
+.vercel/
+.env
+.env.*
+!.env.example
+tmp/
+output/
+input/
+dist/downloads/
+sources/image-import/*/config.json
+DESIGN_REVIEW.md
+*.log

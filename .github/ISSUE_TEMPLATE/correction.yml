@@ -1,0 +1,27 @@
+name: Content or credit correction
+description: Correct a map title, batch, description, credit or attribution.
+title: "Correction: "
+body:
+  - type: markdown
+    attributes:
+      value: "For a private rights or privacy concern, email ks00347@gmail.com instead of posting supporting documents here."
+  - type: input
+    id: map
+    attributes:
+      label: Map title or URL
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What needs correcting?
+      description: Include the current wording and the proposed correction.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Supporting source
+      description: Link to public evidence, attach a relevant artwork detail, or explain how the correction was verified.
+    validations:
+      required: true

@@ -1,0 +1,15 @@
+.git/
+.github/
+.vercel/
+.env*
+node_modules/
+tmp/
+output/
+input/
+sources/
+tests/
+templates/
+dist/downloads/
+build/
+DESIGN_REVIEW.md
+*.log

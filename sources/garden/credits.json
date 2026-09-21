@@ -1,0 +1,12 @@
+{
+  "source": "/assets/garden/map.dzi",
+  "location": "Lower-right printed Team Members / Guided By panel",
+  "guides": [
+    "Chakradhar Saswade",
+    "Balaji Rengarajan",
+    "Sridhar Dhulipala",
+    "Vinod Kumar",
+    "Amit Kapoor"
+  ],
+  "note": "Visually verified from level15 viewer tiles. Preserve printed spelling Balaji Rengarajan."
+}
